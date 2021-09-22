@@ -1,12 +1,23 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+  <div>
+    <px-header></px-header>
+    
     <router-view />
+
+    <px-footer></px-footer>
   </div>
 </template>
+
+<script>
+import PxHeader from "@/components/PxHeader.vue";
+import PxFooter from "@/components/PxFooter.vue";
+
+export default {
+  name: "app",
+  components: { PxHeader, PxFooter },
+};
+</script>
+
 
 <style>
 #app {
