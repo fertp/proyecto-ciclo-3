@@ -1,7 +1,7 @@
 <template>
   <div>
     <px-header></px-header>
-    
+
     <router-view />
 
     <px-footer></px-footer>
@@ -17,7 +17,6 @@ export default {
   components: { PxHeader, PxFooter },
 };
 </script>
-
 
 <style>
 #app {
