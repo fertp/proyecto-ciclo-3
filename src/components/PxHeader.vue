@@ -2,8 +2,7 @@
   <header class="site-heeader">
     <div class="site-header__container">
       <div class="header-logo">
-        <img
-src="../assets/bicicleta.svg" alt="" class="header-logo__img" />
+        <img src="../assets/bicicleta.svg" alt="" class="header-logo__img" />
       </div>
       <nav class="site-nav">
         <ul :class="[showMenu ? 'site-nav__list--show' : '', 'site-nav__list']">
@@ -18,8 +17,7 @@ src="../assets/bicicleta.svg" alt="" class="header-logo__img" />
           </li>
         </ul>
       </nav>
-      <div class="btn_menu"
-v-on:click="toggleMenu">
+      <div class="btn_menu" v-on:click="toggleMenu">
         <img
           src="../assets/menuresponsi.png"
           alt="icionoResponsi"
