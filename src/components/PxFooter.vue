@@ -19,8 +19,12 @@
             </a>
           </li>
           <li class="site-footer__item">
+<<<<<<< HEAD
             <a href=""
 class="site-footer__item-link" target="_blank">
+=======
+            <a href="" class="site-footer__item-link" target="_blank">
+>>>>>>> 09adfc0fc5d947d52f050661e973af64cb963ff4
               <img
                 src="../assets/linkedin-icon.svg"
                 alt=""
