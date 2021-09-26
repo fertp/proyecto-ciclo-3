@@ -7,20 +7,18 @@
       <div class="productos__container">
         <h2 class="productos__title">PRODUCTOS DESTACADOS</h2>
         <div class="productos__grid">
-          <px-product-card :product="product" />
-          <div v-for="p in products" :key="p.id">
-            {{ p }}
+          <div v-for="p in featuredProducts" :key="p.id">
+            <px-product-card :product="p" />
           </div>
         </div>
       </div>
     </section>
+    <!-- TODO -->
+    <!-- Agregar una seccion de descripción con título, imagen y párrafo -->
   </main>
 </template>
 
 <style scoped>
-/* .home-page {
-  padding-top: 80px;
-} */
 .productos {
   padding: 0 30px;
   box-sizing: border-box;
@@ -68,11 +66,11 @@ export default {
 
   data() {
     return {
-      product: {
-        name: "Nombre producto",
-        image: "@/assets/bici.jpg",
-        price: "$29.900",
-      },
+      // product: {
+      //   name: "Nombre producto",
+      //   image: "@/assets/bici.jpg",
+      //   price: "$29.900",
+      // },
       products: [],
     };
   },
@@ -80,5 +78,17 @@ export default {
   created() {
     this.products = productsJson;
   },
+
+  computed: {
+    featuredProducts() {
+      let featured = [];
+
+      for (let i = 0; i < 6; i++) {
+        featured.push(this.products[i]);        
+      }
+
+      return featured
+    }
+  }
 };
 </script>
