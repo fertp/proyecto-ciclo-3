@@ -19,7 +19,8 @@
             </a>
           </li>
           <li class="site-footer__item">
-            <a href="" class="site-footer__item-link" target="_blank">
+            <a href=""
+class="site-footer__item-link" target="_blank">
               <img
                 src="../assets/linkedin-icon.svg"
                 alt=""

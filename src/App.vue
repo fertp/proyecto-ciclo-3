@@ -1,10 +1,10 @@
 <template>
   <div>
-    <px-header></px-header>
+    <px-header />
 
     <router-view />
 
-    <px-footer></px-footer>
+    <px-footer />
   </div>
 </template>
 
@@ -13,7 +13,7 @@ import PxHeader from "@/components/PxHeader.vue";
 import PxFooter from "@/components/PxFooter.vue";
 
 export default {
-  name: "app",
+  name: "App",
   components: { PxHeader, PxFooter },
 };
 </script>

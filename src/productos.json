@@ -1,0 +1,129 @@
+[
+    {
+        "id": 1,
+        "name":"Biciclita Todo Terreno", 
+        "image":"",
+        "slug": "biciclita-todo-terreno",
+        "price":800000,
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
+        "category_id": 1
+    },
+    {
+        "id": 2,
+        "name":"Bicicletas de Ruta", 
+        "image":"",
+        "slug": "bicicletas-de-ruta",
+        "price":1000000,
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
+        "category_id": 1
+    },
+
+    {
+        "id": 3,
+        "name":"Bicicletas de Triatlón y Contrarreloj", 
+        "image":"",
+        "slug": "bicicletas-de-triatlón-y-contrarreloj",
+        "price":2000000,
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
+        "category_id": 1
+    },
+
+    {
+        "id": 4,
+        "name":"Bicicletas para Ruta de Barra Plana", 
+        "image":"",
+        "slug": "bicicletas-para-ruta-de-barra-plana",
+        "price":2500000, 
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
+        "category_id": 1
+    },
+
+    {
+        "id": 5,
+        "name":"Bicicletas de Ciclomontañismo o MTB",
+        "image":"",
+        "slug": "bicicletas-de-ciclomontañismo-o-mtb",
+         "price":3500000, 
+         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
+         "category_id": 1
+    },
+
+    {
+        "id": 6,
+        "name":"Bicicletas de Cyclocross", 
+        "image":"",
+        "slug": "bicicletas-de-cyclocross",
+        "price":3500000, 
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
+        "category_id": 1
+    },
+
+    {
+        "id": 7,
+        "name":"Bicicletas de Gravilla o Gravel",
+        "image":"",
+        "slug": "bicicletas-de-gravilla-o-gravel",
+        "price":2200000,
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
+        "category_id": 1
+    },
+    
+    {
+        "id": 8,
+        "name":"Bicicletas Plegables",
+        "image":"",
+        "slug": "bicicletas-plegables",
+        "price":2000000,
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
+        "category_id": 1
+    },
+
+    {
+        "id": 9,
+        "name":"Bicicletas de BMX",
+        "image":"",
+        "slug": "bicicletas-de-bmx",
+        "price":2000000,
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
+        "category_id": 1
+    },
+
+    {
+        "id": 10,
+        "name":"Fixies' o Bicicletas de una Velocidad",
+        "image":"",
+        "slug": "fixies-o-bicicletas-de-una-velocidad",
+        "price":1500000,
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
+        "category_id": 1
+    },
+
+    {
+        "id": 11,
+        "name":"Bicicletas de Pista o Circuito",
+        "image":"",
+        "slug": "bicicletas-de-pista-o-circuito",
+        "price":3100000,
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
+        "category_id": 1
+    },
+
+    {
+        "id": 12,
+        "name":"Bicicletas Eléctricas y Pedelec",
+        "image":"",
+        "slug": "bicicletas-eléctricas-y-pedelec",
+        "price":3500000,
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
+        "category_id": 1
+    },
+    {
+        "id": 13,
+        "name":"Bicicletas de Paseo",
+        "image":"",
+        "slug": "bicicletas-de-paseo",
+        "price":800000,
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
+        "category_id": 1
+    }
+]

@@ -2,23 +2,29 @@
   <header class="site-heeader">
     <div class="site-header__container">
       <div class="header-logo">
-        <img src="../assets/bicicleta.svg" alt="" class="header-logo__img" />
+        <img
+src="../assets/bicicleta.svg" alt="" class="header-logo__img" />
       </div>
       <nav class="site-nav">
         <ul :class="[showMenu ? 'site-nav__list--show' : '', 'site-nav__list']">
           <li class="site-nav__items">
-            <router-link to="/">Inicio</router-link>
+            <router-link to="/"> Inicio </router-link>
           </li>
           <li class="site-nav__items">
-            <router-link to="/productos">Productos</router-link>
+            <router-link to="/productos"> Productos </router-link>
           </li>
           <li class="site-nav__items">
-            <router-link to="/nosotros">Nosotros</router-link>
+            <router-link to="/nosotros"> Nosotros </router-link>
           </li>
         </ul>
       </nav>
-      <div class="btn_menu" v-on:click="toggleMenu">
-        <img :src="image" alt="icionoResponsi" class="imagenMenu" />
+      <div class="btn_menu"
+v-on:click="toggleMenu">
+        <img
+          src="../assets/menuresponsi.png"
+          alt="icionoResponsi"
+          class="imagenMenu"
+        />
       </div>
     </div>
   </header>

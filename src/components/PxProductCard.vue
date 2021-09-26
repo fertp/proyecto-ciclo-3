@@ -1,10 +1,19 @@
 <template>
   <article class="product-card">
-    <h3 class="product-card__title">NOMBRE</h3>
-    <img src="../assets/bici.jpg" alt="" class="product-card__img" />
-    <p class="product-card__price">$59.900</p>
+    <h3 class="product-card__title">
+      {{ product.name }}
+    </h3>
+    <img
+      src="@/assets/bici.jpg"
+      :alt="product.name"
+      class="product-card__img"
+    />
+    <p class="product-card__price">
+      {{ product.price }}
+    </p>
     <!-- Esto va dentro de un router-link -->
-    <a href="" class="product-card__button">VER PRODUCTO</a>
+    <a href=""
+class="product-card__button">VER PRODUCTO</a>
   </article>
 </template>
 
@@ -42,5 +51,15 @@
 <script>
 export default {
   name: "PxProductCard",
+
+  props: {
+    product: {},
+  },
+
+  // methods: {
+  //   getImagePath(img) {
+  //     return require(`@/assets/${img}`);
+  //   },
+  // },
 };
 </script>
