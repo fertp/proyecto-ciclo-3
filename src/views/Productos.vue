@@ -9,12 +9,12 @@
       </aside>
       <section class="productos">
         <div class="productos__grid">
-          <px-product-card></px-product-card>
-          <px-product-card></px-product-card>
-          <px-product-card></px-product-card>
-          <px-product-card></px-product-card>
-          <px-product-card></px-product-card>
-          <px-product-card></px-product-card>
+
+          <px-product-card 
+            v-for="p in products"
+            :key="p.id"
+            :product="products[0]"></px-product-card>
+
         </div>
       </section>
     </div>
@@ -81,6 +81,7 @@
 }
 </style>
 <script>
+import productsJson from "@/productos.json";
 import PxCategorias from "@/components/PxCategorias.vue";
 import PxProductCard from "@/components/PxProductCard.vue";
 export default {
@@ -89,5 +90,16 @@ export default {
     PxCategorias,
     PxProductCard,
   },
+
+  data() {
+    return {
+      products: [],
+    };
+  },
+
+  created() {
+    this.products = productsJson;
+  },
+
 };
 </script>
