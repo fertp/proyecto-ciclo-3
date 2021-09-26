@@ -1,24 +1,28 @@
 <template>
-  <main class="productos-page">
-    <div class="productos-page__container">
-      <aside class="aside-categoria">
-        <h1 class="aside-categorias__title">Categorias</h1>
-        <div class="aside-categorias__container">
-          <px-categorias></px-categorias>
-        </div>
-      </aside>
-      <section class="productos">
-        <div class="productos__grid">
+  <web-layout>
 
-          <px-product-card 
-            v-for="p in products"
-            :key="p.id"
-            :product="products[0]"></px-product-card>
+    <main class="productos-page">
+      <div class="productos-page__container">
+        <aside class="aside-categoria">
+          <h1 class="aside-categorias__title">Categorias</h1>
+          <div class="aside-categorias__container">
+            <px-categorias></px-categorias>
+          </div>
+        </aside>
+        <section class="productos">
+          <div class="productos__grid">
 
-        </div>
-      </section>
-    </div>
-  </main>
+            <px-product-card 
+              v-for="p in products"
+              :key="p.id"
+              :product="p"></px-product-card>
+
+          </div>
+        </section>
+      </div>
+    </main>
+
+  </web-layout>
 </template>
 
 <style scoped>
@@ -81,12 +85,14 @@
 }
 </style>
 <script>
+import WebLayout from "@/layouts/WebLayout.vue";
 import productsJson from "@/productos.json";
 import PxCategorias from "@/components/PxCategorias.vue";
 import PxProductCard from "@/components/PxProductCard.vue";
 export default {
   name: "Productos",
   components: {
+    WebLayout,
     PxCategorias,
     PxProductCard,
   },

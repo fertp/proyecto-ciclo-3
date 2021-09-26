@@ -12,8 +12,12 @@
       {{ product.price }}
     </p>
     <!-- Esto va dentro de un router-link -->
-    <a href=""
-class="product-card__button">VER PRODUCTO</a>
+    <router-link 
+      :to="{ name:'producto', params: { slug: product.slug, id: product.id } }"
+      class="product-card__button">
+      VER PRODUCTO      
+    </router-link>
+      
   </article>
 </template>
 

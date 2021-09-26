@@ -1,21 +1,25 @@
 <template>
-  <main class="home-page">
-    <!-- cover slider -->
-    <px-cover-slider />
-    <!-- Productos -->
-    <section class="productos">
-      <div class="productos__container">
-        <h2 class="productos__title">PRODUCTOS DESTACADOS</h2>
-        <div class="productos__grid">
-          <div v-for="p in featuredProducts" :key="p.id">
-            <px-product-card :product="p" />
+  <web-layout>
+
+    <main class="home-page">
+      <!-- cover slider -->
+      <px-cover-slider />
+      <!-- Productos -->
+      <section class="productos">
+        <div class="productos__container">
+          <h2 class="productos__title">PRODUCTOS DESTACADOS</h2>
+          <div class="productos__grid">
+            <div v-for="p in featuredProducts" :key="p.id">
+              <px-product-card :product="p" />
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- TODO -->
-    <!-- Agregar una seccion de descripción con título, imagen y párrafo -->
-  </main>
+      </section>
+      <!-- TODO -->
+      <!-- Agregar una seccion de descripción con título, imagen y párrafo -->
+    </main>
+
+  </web-layout>
 </template>
 
 <style scoped>
@@ -53,18 +57,20 @@
 </style>
 
 <script>
-import productsJson from "@/productos.json";
+import WebLayout from "@/layouts/WebLayout.vue";
 import PxCoverSlider from "@/components/PxCoverSlider.vue";
 import PxProductCard from "@/components/PxProductCard.vue";
+import productsJson from "@/productos.json";
 
 export default {
   name: "Home",
   components: {
+    WebLayout,
     PxCoverSlider,
     PxProductCard,
   },
 
-  data() {
+  data () {
     return {
       // product: {
       //   name: "Nombre producto",
