@@ -1,13 +1,13 @@
 <template>
   <web-layout>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h1>/Error 404</h1>
     
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <h1>/Nosotros</h1>
-
   </web-layout>
 </template>
 
@@ -15,7 +15,7 @@
 import WebLayout from '@/layouts/WebLayout.vue';
 
 export default {
-  name: "Nosotros",
+  name: "Error",
   components: {
     WebLayout,
   }
