@@ -2,11 +2,10 @@
   <web-layout>
     <main class="producto-page">
       <div class="producto-page__container">
-
         <!-- row1 -->
         <div class="producto__grid">
           <div class="producto__img-box">
-            <img src="@/assets/bici.jpg" :alt="product.name" class="producto__img">
+            <img src="@/assets/bici.jpg" :alt="product.name" class="producto__img" />
           </div>
           <div class="producto__text">
             <h1 class="producto__title">{{ product.name }}</h1>
@@ -32,10 +31,8 @@
 
         <!-- TODO -->
         <!-- SECTION CON PRODUCTOS RELACIONADOS -->
-
       </div>
     </main>
-
   </web-layout>
 </template>
 
@@ -69,7 +66,6 @@
   font-size: 40px;
   font-weight: bold;
 }
-
 </style>
 
 <script>
@@ -89,18 +85,16 @@ export default {
   },
 
   computed: {
-    formatedPrice () {
+    formatedPrice() {
       let formatedPrice = "$" + this.product.price;
-      return formatedPrice
-    }
+      return formatedPrice;
+    },
   },
 
-  created () {
-
-    this.product = productsJson.find( (p) => {
-      return p.slug === this.$route.params.slug
-    })
-
-  }
-}
+  created() {
+    this.product = productsJson.find((p) => {
+      return p.slug === this.$route.params.slug;
+    });
+  },
+};
 </script>
