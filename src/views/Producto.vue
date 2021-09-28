@@ -73,7 +73,7 @@
 </style>
 
 <script>
-import WebLayout from '@/layouts/WebLayout.vue';
+import WebLayout from "@/layouts/WebLayout.vue";
 import productsJson from "@/productos.json";
 
 export default {
@@ -82,10 +82,10 @@ export default {
     WebLayout,
   },
 
-  data () {
+  data() {
     return {
-      product: {}
-    }
+      product: {},
+    };
   },
 
   computed: {

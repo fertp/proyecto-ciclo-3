@@ -10,21 +10,13 @@
               class="site-footer__item-link"
               target="_blank"
             >
-              <img
-                src="../assets/linkedin-icon.svg"
-                alt=""
-                class="site-footer__item-img"
-              />
+              <img src="../assets/linkedin-icon.svg" alt="" class="site-footer__item-img" />
               <span>Fernando Torres</span>
             </a>
           </li>
           <li class="site-footer__item">
             <a href="" class="site-footer__item-link" target="_blank">
-              <img
-                src="../assets/linkedin-icon.svg"
-                alt=""
-                class="site-footer__item-img"
-              />
+              <img src="../assets/linkedin-icon.svg" alt="" class="site-footer__item-img" />
               <span>Geiner Lara</span>
             </a>
           </li>
@@ -34,11 +26,7 @@
               class="site-footer__item-link"
               target="_blank"
             >
-              <img
-                src="../assets/linkedin-icon.svg"
-                alt=""
-                class="site-footer__item-img"
-              />
+              <img src="../assets/linkedin-icon.svg" alt="" class="site-footer__item-img" />
               <span>Nhora García</span>
             </a>
           </li>
@@ -46,9 +34,7 @@
       </div>
     </footer>
     <div class="footprint">
-      <p class="footprint__text">
-        @2021. Grupo 4. Todos los derechos reservados.
-      </p>
+      <p class="footprint__text">@2021. Grupo 4. Todos los derechos reservados.</p>
     </div>
   </div>
 </template>

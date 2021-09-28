@@ -1,6 +1,5 @@
 <template>
   <web-layout>
-
     <main class="home-page">
       <!-- cover slider -->
       <px-cover-slider />
@@ -18,7 +17,6 @@
       <!-- TODO -->
       <!-- Agregar una seccion de descripción con título, imagen y párrafo -->
     </main>
-
   </web-layout>
 </template>
 
@@ -70,7 +68,7 @@ export default {
     PxProductCard,
   },
 
-  data () {
+  data() {
     return {
       // product: {
       //   name: "Nombre producto",
@@ -90,11 +88,11 @@ export default {
       let featured = [];
 
       for (let i = 0; i < 6; i++) {
-        featured.push(this.products[i]);        
+        featured.push(this.products[i]);
       }
 
-      return featured
-    }
-  }
+      return featured;
+    },
+  },
 };
 </script>

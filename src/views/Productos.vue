@@ -1,6 +1,5 @@
 <template>
   <web-layout>
-
     <main class="productos-page">
       <div class="productos-page__container">
         <aside class="aside-categoria">
@@ -11,17 +10,11 @@
         </aside>
         <section class="productos">
           <div class="productos__grid">
-
-            <px-product-card 
-              v-for="p in products"
-              :key="p.id"
-              :product="p"></px-product-card>
-
+            <px-product-card v-for="p in products" :key="p.id" :product="p"></px-product-card>
           </div>
         </section>
       </div>
     </main>
-
   </web-layout>
 </template>
 
@@ -106,6 +99,5 @@ export default {
   created() {
     this.products = productsJson;
   },
-
 };
 </script>
