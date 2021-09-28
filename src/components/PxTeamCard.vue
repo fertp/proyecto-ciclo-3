@@ -1,36 +1,45 @@
 <template>
   <article class="team-card">
-    <h3 class="team-card__name">
-      {{member.name}}
-    </h3>
     <img
       src="@/assets/Foto_NG.jpg"
       :alt="member.name"
       class="team-card__img"
     />
+    <div class="team-card__text">
+    <h3 class="team-card__name">
+      {{member.name}}
+    </h3>
     <p class="team-card__description">
       {{member.description}} 
     </p>
     <!-- Esto va dentro de un router-link -->
-    <a href="tp.fernando@gmail.com" class="team-card__button">CONTACTAR</a>
+    <a :href="member.mail" class="team-card__button">CONTACTAR</a>
+    </div>
   </article>
 </template>
 
 <style scoped>
 .team-card {
-  display: block;
-  padding-bottom: 30px;
+  display: flex;
+  padding: 20px;
   border-radius: 4px;
   box-shadow: 0 0 2px #ccc;
-  text-align: center;
+  background: #eee;
+  align-items: center;
+  
 }
 .team-card__img {
   display: block;
-  width: 100%;
+  width: 30%;
+
 }
+
+.team-card__text{
+  margin-left: 30px ;
+}
+
 .team-card__button {
   display: flex;
-  margin: auto;
   align-items: center;
   justify-content: center;
   width: 160px;
@@ -40,10 +49,6 @@
   font-weight: bold;
   text-decoration: none;
   border-radius: 4px;
-}
-.product-card__price {
-  font-size: 24px;
-  font-weight: bold;
 }
 </style>
 
