@@ -1,14 +1,12 @@
 <template>
-  <div>    
-
+  <div>
     <!-- site-header -->
     <px-header />
 
-      <slot></slot>
-    
+    <slot></slot>
+
     <!-- site-footer -->
     <px-footer />
-
   </div>
 </template>
 
@@ -17,7 +15,7 @@ import PxHeader from "@/components/PxHeader.vue";
 import PxFooter from "@/components/PxFooter.vue";
 
 export default {
-  name: 'WebLayout',
+  name: "WebLayout",
   components: { PxHeader, PxFooter },
-}
+};
 </script>
