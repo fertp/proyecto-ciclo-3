@@ -1,14 +1,13 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
+
 import Home from "@/views/Home.vue";
 import Productos from "@/views/Productos.vue";
 import Nosotros from "@/views/Nosotros.vue";
 import Producto from "@/views/Producto.vue";
 import Error from "@/views/Error.vue";
-import Index from "@/views/admin/Index.vue";
-import Create from "@/views/admin/Create.vue";
-import Edit from "@/views/admin/Edit.vue";
-import Show from "@/views/admin/Show.vue";
+
+import adminRoutes from "@/router/admin.js";
 
 Vue.use(VueRouter);
 
@@ -31,12 +30,6 @@ const routes = [
     component: Nosotros,
   },
 
-  // {
-  //   path: "/producto",
-  //   name: "producto",
-  //   component: Producto,
-  // },
-
   {
     path: "/productos/:slug",
     name: "producto",
@@ -48,29 +41,8 @@ const routes = [
     name: "error",
     component: Error,
   },
-  {
-    path: "/admin",
-    name: "adminIndex",
-    component: Index,
-  },
-
-  {
-    path: "/admin/create",
-    name: "adminCreate",
-    component: Create,
-  },
-
-  {
-    path: "/admin/edit/:id",
-    name: "adminEdit",
-    component: Edit,
-  },
-
-  {
-    path: "/admin/show/:id",
-    name: "adminShow",
-    component: Show,
-  },
+  
+  ...adminRoutes,
 ];
 
 const router = new VueRouter({
