@@ -25,8 +25,6 @@ body {
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
   padding: 0 30px;
   box-sizing: border-box;
-  /* position: relative; */
-  position: fixed;
   width: 100%;
   top: 0;
   background: #efefef;
@@ -71,31 +69,9 @@ margin-right: 20px;
 </style>
 
 <script>
-// import image from "../assets/menuresponsi.png";
 
 export default {
   name: "PxHeaderAdmin",
 
-  /* data: function () {
-    return {
-      image: image,
-      showMenu: false,
-    }; */
   };
-  /* methods: {
-    /* toggleMenu() {
-      this.showMenu = !this.showMenu;
-      console.log(this.showMenu); */
-    // },
-  
-// }; */
-// addEventListener("DOMContentLoaded", () => {
-//   const btn_menu = document.querySlector(".btn_menu");
-//   if (btn_menu) {
-//     btn_menu.addEventListener("click", () => {
-//       const menu_items = document.querySelector(".site-nav__list");
-//       menu_items.classList.toggle("show");
-//     });
-//   }
-// });
 </script>
