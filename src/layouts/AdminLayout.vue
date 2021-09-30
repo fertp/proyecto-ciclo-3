@@ -1,29 +1,27 @@
 <template>
   <div class="admin-layout">
-
     <!-- header -->
     <px-header-admin />
 
     <!-- content-grid -->
     <div class="admin-layout__content-grid">
-
       <!-- side-panel -->
       <px-side-panel />
-
+      <!-- tabla -->
+      <px-tabla-admin />
       <!-- content-slot -->
       <slot></slot>
-
     </div>
   </div>
 </template>
 
 <script>
 import PxHeaderAdmin from "@/components/admin/PxHeaderAdmin.vue";
-import PxSidePanel from '@/components/admin/PxSidePanel.vue';
-
+import PxSidePanel from "@/components/admin/PxSidePanel.vue";
+import PxTablaAdmin from "@/components/admin/PxTablaAdmin.vue";
 export default {
   name: "AdminLayout",
-  components: { PxHeaderAdmin, PxSidePanel },
+  components: { PxHeaderAdmin, PxSidePanel, PxTablaAdmin },
 };
 </script>
 

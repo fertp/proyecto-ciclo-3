@@ -1,0 +1,77 @@
+<template>
+  <main>
+    <table>
+      <tr>
+        <td>ID</td>
+        <td>NOMBRE</td>
+        <td colspan="2">ACCIONES</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>elemento1</td>
+        <td>elemento2</td>
+        <td>
+          <button>Editar</button>
+        </td>
+        <td>
+          <button>Eliminar</button>
+        </td>
+      </tr>
+      <tr>
+        <td>elemento1</td>
+        <td>elemento2</td>
+        <td>
+          <button>Editar</button>
+        </td>
+        <td>
+          <button>Eliminar</button>
+        </td>
+      </tr>
+      <tr>
+        <td>elemento1</td>
+        <td>elemento2</td>
+        <td>
+          <button>Editar</button>
+        </td>
+        <td>
+          <button>Eliminar</button>
+        </td>
+      </tr>
+      <tr>
+        <td>elemento1</td>
+        <td>elemento2</td>
+        <td>
+          <button>Editar</button>
+        </td>
+        <td>
+          <button>Eliminar</button>
+        </td>
+      </tr>
+      <tr>
+        <td>elemento1</td>
+        <td>elemento2</td>
+        <td>
+          <button>Editar</button>
+        </td>
+        <td>
+          <button>Eliminar</button>
+        </td>
+      </tr>
+      <tr>
+        <td>elemento1</td>
+        <td>elemento2</td>
+        <td>
+          <button>Editar</button>
+        </td>
+        <td>
+          <button>Eliminar</button>
+        </td>
+      </tr>
+    </table>
+  </main>
+</template>
+<style>
+td {
+  background: blue;
+}
+</style>

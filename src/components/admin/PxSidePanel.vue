@@ -3,8 +3,7 @@
 </template>
 
 <script>
-
 export default {
-  name: 'PxSidePanel',
-}
+  name: "PxSidePanel",
+};
 </script>
