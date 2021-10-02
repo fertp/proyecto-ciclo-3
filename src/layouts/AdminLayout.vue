@@ -54,15 +54,21 @@ overflow: scroll;
   grid-template-columns: 200px auto;
 }
 .button {
+  padding: 0 16px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  width: 60px;
+  /* width: 60px; */
   height: 30px;
+  background-color: #ccc;
+  border:1px solid #444;
+  color: #444;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.primary-button{
   background-color: #000;
   color: #ffff;
-  border-radius: 10px;
-  text-decoration: none;
 }
 </style>

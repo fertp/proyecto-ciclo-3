@@ -5,7 +5,7 @@
         <input type="text" class="table-top__search-box" placeholder="Buscar...">
         <div class="table-top__create-button">
           <span class="table-top__create-label">Crear Producto</span>
-          <router-link to="/admin/create" class="button">Crear</router-link>
+          <router-link to="/admin/create" class="primary-button button">Crear</router-link>
         </div>
       </div>
       <table class="container-table__tabla">
