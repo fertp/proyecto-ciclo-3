@@ -1,69 +1,77 @@
 <template>
-  <main>
-    <div class="container-table">
-      <div class="table-top">
-        <input type="text" class="table-top__search-box" placeholder="Buscar...">
-        <div class="table-top__create-button">
-          <span class="table-top__create-label">Crear Producto</span>
-          <router-link to="/admin/create" class="primary-button button">Crear</router-link>
-        </div>
+  <div>
+    <section class="table-top">
+      <input type="text" class="table-top__search-box" placeholder="Buscar..." />
+      <div class="table-top__create-button">
+        <span class="table-top__create-label">Crear Producto</span>
+        <router-link to="/admin/create" class="primary-button button">Crear</router-link>
       </div>
-      <table class="container-table__tabla">
+    </section>
+    <!-- products-table -->
+    <table class="products-table">
+      <thead>
         <tr>
-          <th class="table-cabecera table-cabecera__id">ID</th>
-          <th class="table-cabecera table-cabecera__nombre">NOMBRE</th>
-          <th class="table-cabecera" colspan="2">ACCIONES</th>
+          <th>ID</th>
+          <th>NOMBRE</th>
+          <th colspan="2">ACCIONES</th>
         </tr>
-        <px-table-row></px-table-row>
-        <px-table-row></px-table-row>
-        <px-table-row></px-table-row>
-        <px-table-row></px-table-row>
-        <px-table-row></px-table-row>
-      </table>
-    </div>
-  </main>
+      </thead>
+      <tbody>
+
+        <tr v-for="p in products" :key="p.id">
+          <td class="product-table__id-column">{{ p.id }}</td>
+          <td>{{ p.name }}</td>
+          <td class="container-table__celdaboton">
+            <router-link :to="`/admin/edit/${p.id}`" 
+              class="button boton-celda">Editar</router-link>
+          </td>
+          <td class="container-table__celdaboton">
+            <router-link to="/admin/show/1" class="button boton-celda">Ver</router-link>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
 </template>
 <style>
-.container-table {
-  
-}
-.table-top{
+.table-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding:8px ;
+  padding: 8px;
   box-sizing: border-box;
   border: 1px solid #ccc;
 }
-.table-top__search-box{
+.table-top__search-box {
   display: block;
   height: 30px;
-  border: 1px solid #ccc;  
+  border: 1px solid #ccc;
   width: 100%;
   padding: 0 4px;
 }
-.table-top__create-button{
-display: flex;
-align-items: center;
+.table-top__create-button {
+  display: flex;
+  align-items: center;
 }
-.table-top__create-label{
+.table-top__create-label {
   margin: 8px;
   display: block;
   min-width: 120px;
   text-align: right;
 }
-.container-table__tabla {
+.products-table {
   margin: 0 auto;
   border-collapse: collapse;
   width: 100%;
   text-align: center;
   border: 1px solid #ccc;
 }
-.container-table__celda {
+.products-table td {
   border: 1px solid #ccc;
   padding: 4px;
 }
-.table-cabecera {
+.products-table th {
   background-color: #ccc;
   padding: 20px;
 }
@@ -74,23 +82,27 @@ align-items: center;
   width: 40px;
   text-align: center;
 }
-.table-cabecera__id {
+.product-table__id-column {
   width: 60px;
 }
-.boton-celda{
-  /* display: inline-flex; */
-  margin: 0 auto;
-}
-
 </style>
 <script>
-import PxTableRow from '@/components/admin/PxTableRow.vue'
-
+import productsJson from "@/productos.json";
+// import PxTableRow from "@/components/admin/PxTableRow.vue";
 
 export default {
-  name:"PxTablaAdmin",
-  components:{
-    PxTableRow
-  }
-  }
+  name: "PxTablaAdmin",
+  components: {
+    // PxTableRow,
+  },
+  data() {
+    return {
+      producs: []
+    }
+  },
+
+  created() {
+    this.products = productsJson;
+  },
+};
 </script>

@@ -1,7 +1,7 @@
 <template>
   <admin-layout>
     <h1>CREAR PRODUCTO</h1>
-    <px-product-form action="create" >
+    <px-product-form actionBtn="Crear" >
 
     </px-product-form>
   </admin-layout>

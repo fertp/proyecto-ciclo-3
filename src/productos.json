@@ -7,7 +7,8 @@
         "price":800000,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
         "features": "features de este producto.",
-        "category_id": 1
+        "category_id": 1,
+        "status": "activo"
     },
     {
         "id": 2,
@@ -17,7 +18,8 @@
         "price":1000000,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
         "features": "features de este producto.",
-        "category_id": 1
+        "category_id": 1,
+        "status": "activo"
     },
 
     {
@@ -28,7 +30,8 @@
         "price":2000000,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
         "features": "features de este producto.",
-        "category_id": 1
+        "category_id": 1,
+        "status": "activo"
     },
 
     {
@@ -39,7 +42,8 @@
         "price":2500000, 
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
         "features": "features de este producto.",
-        "category_id": 1
+        "category_id": 1,
+        "status": "activo"
     },
 
     {
@@ -50,7 +54,8 @@
          "price":3500000, 
          "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
          "features": "features de este producto.",
-         "category_id": 1
+         "category_id": 1,
+         "status": "activo"
     },
 
     {
@@ -61,7 +66,8 @@
         "price":3500000, 
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
         "features": "features de este producto.",
-        "category_id": 1
+        "category_id": 1,
+        "status": "activo"
     },
 
     {
@@ -72,7 +78,8 @@
         "price":2200000,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
         "features": "features de este producto.",
-        "category_id": 1
+        "category_id": 1,
+        "status": "activo"
     },
     
     {
@@ -83,7 +90,8 @@
         "price":2000000,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
         "features": "features de este producto.",
-        "category_id": 1
+        "category_id": 1,
+        "status": "activo"
     },
 
     {
@@ -94,7 +102,8 @@
         "price":2000000,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
         "features": "features de este producto.",
-        "category_id": 1
+        "category_id": 1,
+        "status": "activo"
     },
 
     {
@@ -105,7 +114,8 @@
         "price":1500000,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
         "features": "features de este producto.",
-        "category_id": 1
+        "category_id": 1,
+        "status": "activo"
     },
 
     {
@@ -116,7 +126,8 @@
         "price":3100000,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
         "features": "features de este producto.",
-        "category_id": 1
+        "category_id": 1,
+        "status": "activo"
     },
 
     {
@@ -127,7 +138,8 @@
         "price":3500000,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
         "features": "features de este producto.",
-        "category_id": 1
+        "category_id": 1,
+        "status": "activo"
     },
     {
         "id": 13,
@@ -137,6 +149,7 @@
         "price":800000,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
         "features": "features de este producto.",
-        "category_id": 1
+        "category_id": 1,
+        "status": "activo"
     }
 ]
