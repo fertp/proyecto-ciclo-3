@@ -86,17 +86,11 @@
 }
 .container-table__celda {
   border: 2px solid black;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 4px;
 }
 .table-cabecera {
   background-color: #ccc;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px;
 }
 .table-cabecera__nombre {
   width: 250px;
