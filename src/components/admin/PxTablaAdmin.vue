@@ -14,7 +14,7 @@
             <button>Editar</button>
           </td>
           <td class="container-table__celda container-table__celdaboton">
-            <button>Eliminar</button>
+            <button>Ver</button>
           </td>
         </tr>
         <tr>
@@ -24,7 +24,7 @@
             <button>Editar</button>
           </td>
           <td class="container-table__celda container-table__celdaboton">
-            <button>Eliminar</button>
+            <button>Ver</button>
           </td>
         </tr>
         <tr>
