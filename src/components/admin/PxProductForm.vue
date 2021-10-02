@@ -29,19 +29,30 @@
         <label>Estado:</label>
         <div>
           <label class="product-form__radio">
-            <input type="radio" name="status" value="activo" v-bind="product.status" />
+            <input
+              type="radio"
+              name="status"
+              value="activo"
+              v-model="status"
+              class="product-form__radio-button"
+            />
             <span>Activo</span>
           </label>
           <label class="product-form__radio">
-            <input type="radio" name="status" value="inactivo" v-bind="product.status" />
+            <input
+              type="radio"
+              name="status"
+              value="inactivo"
+              v-model="status"
+              class="product-form__radio-button"
+            />
             <span>Inactivo</span>
           </label>
         </div>
       </div>
-      {{ product.status }}
-      {{ product.price }}
       <div class="product-form__button">
-        <button class="button">Cancelar</button>
+        <!-- <button class="button" to="/admin">Cancelar</button> -->
+        <router-link to="/admin" class="button">Cancelar</router-link>
         <button class="primary-button button">{{ actionBtn }}</button>
       </div>
     </form>
@@ -74,6 +85,9 @@
   display: block;
   margin-bottom: 4px;
 }
+.product-form__radio-button {
+  margin-right: 8px;
+}
 .product-form__button {
   display: flex;
   justify-content: flex-end;
@@ -88,6 +102,7 @@ export default {
   data() {
     return {
       product: {},
+      status: "",
     };
   },
   props: {
@@ -95,7 +110,8 @@ export default {
     productData: Object,
   },
   created() {
-    this.product = this.productData
+    this.product = this.productData;
+    this.status = this.productData.status;
   },
 };
 </script>

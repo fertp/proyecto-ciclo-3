@@ -8,7 +8,7 @@
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
         "features": "features de este producto.",
         "category_id": 1,
-        "status": "activo"
+        "status": "inactivo"
     },
     {
         "id": 2,

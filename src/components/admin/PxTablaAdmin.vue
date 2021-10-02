@@ -17,19 +17,16 @@
         </tr>
       </thead>
       <tbody>
-
         <tr v-for="p in products" :key="p.id">
           <td class="product-table__id-column">{{ p.id }}</td>
           <td>{{ p.name }}</td>
           <td class="container-table__celdaboton">
-            <router-link :to="`/admin/edit/${p.id}`" 
-              class="button boton-celda">Editar</router-link>
+            <router-link :to="`/admin/edit/${p.id}`" class="button boton-celda">Editar</router-link>
           </td>
           <td class="container-table__celdaboton">
             <router-link to="/admin/show/1" class="button boton-celda">Ver</router-link>
           </td>
         </tr>
-
       </tbody>
     </table>
   </div>
@@ -97,8 +94,8 @@ export default {
   },
   data() {
     return {
-      producs: []
-    }
+      producs: [],
+    };
   },
 
   created() {

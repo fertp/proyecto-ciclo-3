@@ -7,12 +7,10 @@
     <div class="admin-layout__content-grid">
       <!-- side-panel -->
       <px-side-panel />
-      
+
       <!-- content-slot -->
       <div class="admin-layout__content-slot">
-        <slot>
-
-        </slot>
+        <slot> </slot>
       </div>
     </div>
   </div>
@@ -40,14 +38,14 @@ export default {
   grid-template-rows: 80px auto;
   width: 100%;
   top: 0;
-  
+
   /* Hay que ponerle el alto completo de pantalla
     fijarlo y que sólo haga scroll la parte del contenido */
 }
-.admin-layout__content-slot{
-padding: 50px;
-box-sizing: border-box;
-overflow: scroll;
+.admin-layout__content-slot {
+  padding: 50px;
+  box-sizing: border-box;
+  overflow: scroll;
 }
 .admin-layout__content-grid {
   display: grid;
@@ -62,13 +60,17 @@ overflow: scroll;
   /* width: 60px; */
   height: 30px;
   background-color: #ccc;
-  border:1px solid #444;
+  border: 1px solid #444;
   color: #444;
   border-radius: 4px;
   text-decoration: none;
 }
-.primary-button{
+.primary-button {
   background-color: #000;
+  color: #ffff;
+}
+.warning-button {
+  background-color: red;
   color: #ffff;
 }
 </style>
