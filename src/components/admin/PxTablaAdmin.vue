@@ -1,94 +1,74 @@
 <template>
-  <main>
-    <div class="container-table">
-      <table class="container-table__tabla">
+  <div>
+    <section class="table-top">
+      <input type="text" class="table-top__search-box" placeholder="Buscar..." />
+      <div class="table-top__create-button">
+        <span class="table-top__create-label">Crear Producto</span>
+        <router-link to="/admin/create" class="primary-button button">Crear</router-link>
+      </div>
+    </section>
+    <!-- products-table -->
+    <table class="products-table">
+      <thead>
         <tr>
-          <th class="table-cabecera table-cabecera__id">ID</th>
-          <th class="table-cabecera table-cabecera__nombre">NOMBRE</th>
-          <th class="table-cabecera" colspan="2">ACCIONES</th>
+          <th>ID</th>
+          <th>NOMBRE</th>
+          <th colspan="2">ACCIONES</th>
         </tr>
-        <tr>
-          <td class="container-table__celda">elemento1</td>
-          <td class="container-table__celda">elemento2</td>
-          <td class="container-table__celda container-table__celdaboton">
-            <button>Editar</button>
+      </thead>
+      <tbody>
+        <tr v-for="p in products" :key="p.id">
+          <td class="product-table__id-column">{{ p.id }}</td>
+          <td>{{ p.name }}</td>
+          <td class="container-table__celdaboton">
+            <router-link :to="`/admin/edit/${p.id}`" class="button boton-celda">Editar</router-link>
           </td>
-          <td class="container-table__celda container-table__celdaboton">
-            <button>Ver</button>
-          </td>
-        </tr>
-        <tr>
-          <td class="container-table__celda">elemento1</td>
-          <td class="container-table__celda">elemento2</td>
-          <td class="container-table__celda container-table__celdaboton">
-            <button>Editar</button>
-          </td>
-          <td class="container-table__celda container-table__celdaboton">
-            <button>Ver</button>
-          </td>
-        </tr>
-        <tr>
-          <td class="container-table__celda">elemento1</td>
-          <td class="container-table__celda">elemento2</td>
-          <td class="container-table__celda container-table__celdaboton">
-            <button>Editar</button>
-          </td>
-          <td class="container-table__celda container-table__celdaboton">
-            <button>Ver</button>
+          <td class="container-table__celdaboton">
+            <router-link to="/admin/show/1" class="button boton-celda">Ver</router-link>
           </td>
         </tr>
-        <tr>
-          <td class="container-table__celda">elemento1</td>
-          <td class="container-table__celda">elemento2</td>
-          <td class="container-table__celda container-table__celdaboton">
-            <button>Editar</button>
-          </td>
-          <td class="container-table__celda container-table__celdaboton">
-            <button>Ver</button>
-          </td>
-        </tr>
-        <tr>
-          <td class="container-table__celda">elemento1</td>
-          <td class="container-table__celda">elemento2</td>
-          <td class="container-table__celda container-table__celdaboton">
-            <button>Editar</button>
-          </td>
-          <td class="container-table__celda container-table__celdaboton">
-            <button>Ver</button>
-          </td>
-        </tr>
-        <tr>
-          <td class="container-table__celda">elemento1</td>
-          <td class="container-table__celda">elemento2</td>
-          <td class="container-table__celda container-table__celdaboton">
-            <button>Editar</button>
-          </td>
-          <td class="container-table__celda container-table__celdaboton">
-            <button>Ver</button>
-          </td>
-        </tr>
-      </table>
-    </div>
-  </main>
+      </tbody>
+    </table>
+  </div>
 </template>
 <style>
-.container-table {
-  margin-top: 50px;
-  margin-right: 30px;
+.table-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
 }
-
-.container-table__tabla {
+.table-top__search-box {
+  display: block;
+  height: 30px;
+  border: 1px solid #ccc;
+  width: 100%;
+  padding: 0 4px;
+}
+.table-top__create-button {
+  display: flex;
+  align-items: center;
+}
+.table-top__create-label {
+  margin: 8px;
+  display: block;
+  min-width: 120px;
+  text-align: right;
+}
+.products-table {
   margin: 0 auto;
   border-collapse: collapse;
   width: 100%;
   text-align: center;
-  border: 2px solid black;
+  border: 1px solid #ccc;
 }
-.container-table__celda {
-  border: 2px solid black;
+.products-table td {
+  border: 1px solid #ccc;
   padding: 4px;
 }
-.table-cabecera {
+.products-table th {
   background-color: #ccc;
   padding: 20px;
 }
@@ -97,16 +77,29 @@
 }
 .container-table__celdaboton {
   width: 40px;
+  text-align: center;
 }
-.table-cabecera__id {
+.product-table__id-column {
   width: 60px;
 }
-
-.container-table__celdaboton button {
-  width: 100px;
-  height: 40px;
-  background-color: #000;
-  color: #ffff;
-  border-radius: 10px;
-}
 </style>
+<script>
+import productsJson from "@/productos.json";
+// import PxTableRow from "@/components/admin/PxTableRow.vue";
+
+export default {
+  name: "PxTablaAdmin",
+  components: {
+    // PxTableRow,
+  },
+  data() {
+    return {
+      producs: [],
+    };
+  },
+
+  created() {
+    this.products = productsJson;
+  },
+};
+</script>

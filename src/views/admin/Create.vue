@@ -1,16 +1,18 @@
 <template>
   <admin-layout>
+    <h1>CREAR PRODUCTO</h1>
+    <px-product-form actionBtn="Crear" >
 
-    <h1>/admin/create</h1>
-
+    </px-product-form>
   </admin-layout>
 </template>
 
 <script>
-import AdminLayout from '@/layouts/AdminLayout.vue';
+import PxProductForm from "@/components/admin/PxProductForm.vue";
+import AdminLayout from "@/layouts/AdminLayout.vue"
 
 export default {
   name: "Create",
-  components: { AdminLayout }
+  components: { AdminLayout,PxProductForm },
 };
 </script>
