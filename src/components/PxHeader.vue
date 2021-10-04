@@ -25,12 +25,8 @@
 </template>
 
 <style>
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 .site-heeader {
+  position: absolute;
   background: #fff;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
   padding: 0 30px;
@@ -39,6 +35,7 @@ body {
   position: fixed;
   width: 100%;
   top: 0;
+  z-index: 99;
 }
 .site-header__container {
   display: flex;

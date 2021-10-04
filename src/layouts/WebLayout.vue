@@ -10,6 +10,14 @@
   </div>
 </template>
 
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+</style>
+
 <script>
 import PxHeader from "@/components/PxHeader.vue";
 import PxFooter from "@/components/PxFooter.vue";
