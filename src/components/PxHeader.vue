@@ -18,11 +18,7 @@
         </ul>
       </nav>
       <div class="btn_menu" v-on:click="toggleMenu">
-        <img
-          src="../assets/menuresponsi.png"
-          alt="icionoResponsi"
-          class="imagenMenu"
-        />
+        <img src="../assets/menuresponsi.png" alt="icionoResponsi" class="imagenMenu" />
       </div>
     </div>
   </header>

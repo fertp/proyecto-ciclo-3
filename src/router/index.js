@@ -1,8 +1,13 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+
+import Home from "@/views/Home.vue";
 import Productos from "@/views/Productos.vue";
 import Nosotros from "@/views/Nosotros.vue";
+import Producto from "@/views/Producto.vue";
+import Error from "@/views/Error.vue";
+
+import adminRoutes from "@/router/admin.js";
 
 Vue.use(VueRouter);
 
@@ -12,16 +17,32 @@ const routes = [
     name: "Home",
     component: Home,
   },
-  {
-    path: "/nosotros",
-    name: "Nosotros",
-    component: Nosotros,
-  },
+
   {
     path: "/productos",
-    name: "Productos",
+    name: "productos",
     component: Productos,
   },
+
+  {
+    path: "/nosotros",
+    name: "nosotros",
+    component: Nosotros,
+  },
+
+  {
+    path: "/productos/:slug",
+    name: "producto",
+    component: Producto,
+  },
+
+  {
+    path: "*",
+    name: "error",
+    component: Error,
+  },
+  
+  ...adminRoutes,
 ];
 
 const router = new VueRouter({

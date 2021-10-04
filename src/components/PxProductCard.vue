@@ -3,17 +3,17 @@
     <h3 class="product-card__title">
       {{ product.name }}
     </h3>
-    <img
-      src="@/assets/bici.jpg"
-      :alt="product.name"
-      class="product-card__img"
-    />
+    <img src="@/assets/bici.jpg" :alt="product.name" class="product-card__img" />
     <p class="product-card__price">
       {{ product.price }}
     </p>
     <!-- Esto va dentro de un router-link -->
-    <a href=""
-class="product-card__button">VER PRODUCTO</a>
+    <router-link
+      :to="{ name: 'producto', params: { slug: product.slug, id: product.id } }"
+      class="product-card__button"
+    >
+      VER PRODUCTO
+    </router-link>
   </article>
 </template>
 

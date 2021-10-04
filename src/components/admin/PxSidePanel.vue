@@ -1,12 +1,9 @@
 <template>
-
-  <router-view />
-    
+  <p>Este es el aside</p>
 </template>
 
 <script>
-
 export default {
-  name: "App",
+  name: "PxSidePanel",
 };
 </script>
