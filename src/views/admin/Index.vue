@@ -1,16 +1,16 @@
 <template>
   <admin-layout> 
     <!-- tabla -->
-      <px-tabla-admin />
+      <px-products-table />
   </admin-layout>
 </template>
 
 <script>
 import AdminLayout from "@/layouts/AdminLayout.vue";
-import PxTablaAdmin from "@/components/admin/PxTablaAdmin.vue";
+import PxProductsTable from "@/components/admin/PxProductsTable.vue";
 
 export default {
   name: "Index",
-  components: { AdminLayout,PxTablaAdmin },
+  components: { AdminLayout, PxProductsTable },
 };
 </script>

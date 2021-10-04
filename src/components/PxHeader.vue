@@ -2,7 +2,9 @@
   <header class="site-heeader">
     <div class="site-header__container">
       <div class="header-logo">
-        <img src="../assets/bicicleta.svg" alt="" class="header-logo__img" />
+        <router-link to="/">
+          <img src="../assets/bicicleta.svg" alt="" class="header-logo__img" />
+        </router-link>
       </div>
       <nav class="site-nav">
         <ul :class="[showMenu ? 'site-nav__list--show' : '', 'site-nav__list']">

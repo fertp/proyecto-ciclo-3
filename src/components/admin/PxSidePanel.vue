@@ -1,5 +1,5 @@
 <template>
-  <aside class="side-panel">
+  <section class="side-panel">
     <nav class="side-panel__nav">
       <ul class="side-panel__list">
         <li class="side-panel__item">
@@ -9,8 +9,13 @@
           <router-link to="/admin" class="side-panel__link">Usuarios</router-link>
         </li>
       </ul>
+      <ul class="side-panel__list">
+        <li class="side-panel__item">
+          <a href="/" class="side-panel__link">Sitio web</a>
+        </li>
+      </ul>
     </nav>
-  </aside>
+  </section>
 </template>
 
 <style scoped>
@@ -21,7 +26,12 @@
   padding: 30px 0;
   box-sizing: border-box;
 }
-
+.side-panel__nav {
+  display: flex;
+  height: 100%;;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .side-panel__list {
   list-style: none;
 }

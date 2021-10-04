@@ -1,18 +1,20 @@
 <template>
   <div class="admin-layout">
     <!-- header -->
-    <px-header-admin />
+    <px-header-admin class="admin-layout__header" />
 
     <!-- content-grid -->
     <div class="admin-layout__content-grid">
       <!-- side-panel -->
       <px-side-panel />
-
       <!-- content-slot -->
-      <div class="admin-layout__content-slot">
+      <section class="admin-layout__content-slot">
+
         <slot> </slot>
-      </div>
+
+      </section>
     </div>
+
   </div>
 </template>
 
@@ -32,24 +34,25 @@ export default {
   padding: 0;
 }
 .admin-layout {
-  position: fixed;
   display: grid;
   height: 100vh;
-  grid-template-rows: 80px auto;
+  max-height: 100vh;
+  grid-template-rows: 80px 1fr;
   width: 100%;
   top: 0;
-
-  /* Hay que ponerle el alto completo de pantalla
-    fijarlo y que sólo haga scroll la parte del contenido */
-}
-.admin-layout__content-slot {
-  padding: 50px;
-  box-sizing: border-box;
-  overflow: scroll;
 }
 .admin-layout__content-grid {
   display: grid;
   grid-template-columns: 200px auto;
+}
+.admin-layout__content-slot {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 80px);
+  /* height: 100%; */
+  padding: 50px;
+  box-sizing: border-box;
+  overflow-y: scroll;
 }
 .button {
   padding: 0 16px;
