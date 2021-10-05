@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name":"Biciclita Todo Terreno", 
-        "image":"bici.jpg",
+        "image":"/images/products/bici.jpg",
         "slug": "biciclita-todo-terreno",
         "price":800000,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
@@ -13,7 +13,7 @@
     {
         "id": 2,
         "name":"Bicicletas de Ruta", 
-        "image":"bici.jpg",
+        "image":"/images/products/bici.jpg",
         "slug": "bicicletas-de-ruta",
         "price":1000000,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
@@ -25,7 +25,7 @@
     {
         "id": 3,
         "name":"Bicicletas de Triatlón y Contrarreloj", 
-        "image":"bici.jpg",
+        "image":"/images/products/bici.jpg",
         "slug": "bicicletas-de-triatlón-y-contrarreloj",
         "price":2000000,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
@@ -37,7 +37,7 @@
     {
         "id": 4,
         "name":"Bicicletas para Ruta de Barra Plana", 
-        "image":"bici.jpg",
+        "image":"/images/products/bici.jpg",
         "slug": "bicicletas-para-ruta-de-barra-plana",
         "price":2500000, 
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
@@ -49,7 +49,7 @@
     {
         "id": 5,
         "name":"Bicicletas de Ciclomontañismo o MTB",
-        "image":"bici.jpg",
+        "image":"/images/products/bici.jpg",
         "slug": "bicicletas-de-ciclomontañismo-o-mtb",
          "price":3500000, 
          "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
@@ -61,7 +61,7 @@
     {
         "id": 6,
         "name":"Bicicletas de Cyclocross", 
-        "image":"bici.jpg",
+        "image":"/images/products/bici.jpg",
         "slug": "bicicletas-de-cyclocross",
         "price":3500000, 
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
@@ -73,7 +73,7 @@
     {
         "id": 7,
         "name":"Bicicletas de Gravilla o Gravel",
-        "image":"bici.jpg",
+        "image":"/images/products/bici.jpg",
         "slug": "bicicletas-de-gravilla-o-gravel",
         "price":2200000,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
@@ -85,7 +85,7 @@
     {
         "id": 8,
         "name":"Bicicletas Plegables",
-        "image":"bici.jpg",
+        "image":"/images/products/bici.jpg",
         "slug": "bicicletas-plegables",
         "price":2000000,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
@@ -97,7 +97,7 @@
     {
         "id": 9,
         "name":"Bicicletas de BMX",
-        "image":"bici.jpg",
+        "image":"/images/products/bici.jpg",
         "slug": "bicicletas-de-bmx",
         "price":2000000,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
@@ -109,7 +109,7 @@
     {
         "id": 10,
         "name":"Fixies' o Bicicletas de una Velocidad",
-        "image":"bici.jpg",
+        "image":"/images/products/bici.jpg",
         "slug": "fixies-o-bicicletas-de-una-velocidad",
         "price":1500000,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
@@ -121,7 +121,7 @@
     {
         "id": 11,
         "name":"Bicicletas de Pista o Circuito",
-        "image":"bici.jpg",
+        "image":"/images/products/bici.jpg",
         "slug": "bicicletas-de-pista-o-circuito",
         "price":3100000,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
@@ -133,7 +133,7 @@
     {
         "id": 12,
         "name":"Bicicletas Eléctricas y Pedelec",
-        "image":"bici.jpg",
+        "image":"/images/products/bici.jpg",
         "slug": "bicicletas-eléctricas-y-pedelec",
         "price":3500000,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
@@ -144,7 +144,7 @@
     {
         "id": 13,
         "name":"Bicicletas de Paseo",
-        "image":"bici.jpg",
+        "image":"/images/products/bici.jpg",
         "slug": "bicicletas-de-paseo",
         "price":800000,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",

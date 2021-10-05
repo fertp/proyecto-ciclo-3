@@ -8,9 +8,9 @@
         <div class="productos__container">
           <h2 class="productos__title">PRODUCTOS DESTACADOS</h2>
           <div class="productos__grid">
-            <div v-for="p in featuredProducts" :key="p.id">
-              <px-product-card :product="p" />
-            </div>
+            
+              <px-product-card v-for="p in featuredProducts" :key="p.id" :product="p" />
+            
           </div>
         </div>
       </section>

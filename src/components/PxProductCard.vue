@@ -3,8 +3,13 @@
     <h3 class="product-card__title">
       {{ product.name }}
     </h3>
-    <img
+    <!-- <img
       :src="require('@/assets/' + product.image)"
+      :alt="product.name"
+      class="product-card__img"
+    /> -->
+    <img
+      :src="product.image"
       :alt="product.name"
       class="product-card__img"
     />
@@ -60,10 +65,10 @@ export default {
     product: {},
   },
 
-  // methods: {
-  //   getImagePath(img) {
-  //     return require(`@/assets/${img}`);
-  //   },
-  // },
+  data () {
+    return {
+      publicPath: process.env.BASE_URL
+    }
+  }
 };
 </script>
