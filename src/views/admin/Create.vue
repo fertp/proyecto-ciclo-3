@@ -1,9 +1,9 @@
 <template>
   <admin-layout>
-    <h1>CREAR PRODUCTO</h1>
-    <px-product-form actionBtn="Crear" productData="product">
 
-    </px-product-form>
+    <h1>CREAR PRODUCTO</h1>
+    <px-product-form actionBtn="Crear" :product="{}" />
+
   </admin-layout>
 </template>
 
@@ -13,7 +13,7 @@ import AdminLayout from "@/layouts/AdminLayout.vue"
 
 export default {
   name: "Create",
-  components: { AdminLayout,PxProductForm },
+  components: { AdminLayout, PxProductForm },
   data () {
     return {
       product: {}

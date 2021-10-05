@@ -3,19 +3,19 @@
     <form action="">
       <div class="product-form__field">
         <label>Nombre:</label>
-        <input type="text" v-bind:value="product.name" class="product-form__input" />
+        <input type="text" v-model="form.name" class="product-form__input" />
       </div>
       <div class="product-form__field">
         <label>Precio</label>
-        <input type="text" v-bind:value="product.price" class="product-form__input" />
+        <input type="text" v-model="form.price" class="product-form__input" />
       </div>
       <div class="product-form__field">
         <label>Descripción:</label>
-        <textarea v-bind:value="product.description" class="product-form__input" />
+        <textarea v-model="form.description" class="product-form__input" />
       </div>
       <div class="product-form__field">
         <label>Características:</label>
-        <textarea v-bind:value="product.features" class="product-form__input" />
+        <textarea v-model="form.features" class="product-form__input" />
       </div>
       <div class="product-form__field">
         <!-- <label>Categoría</label>
@@ -23,7 +23,7 @@
       </div>
       <div class="product-form__field">
         <label>Imagen:</label>
-        <input type="file" v-bind:value="product.image" />
+        <input type="file" v-bind:value="form.image" />
       </div>
       <div class="product-form__field">
         <label>Estado:</label>
@@ -33,7 +33,7 @@
               type="radio"
               name="status"
               value="activo"
-              v-model="status"
+              v-model="form.status"
               class="product-form__radio-button"
             />
             <span>Activo</span>
@@ -43,7 +43,7 @@
               type="radio"
               name="status"
               value="inactivo"
-              v-model="status"
+              v-model="form.status"
               class="product-form__radio-button"
             />
             <span>Inactivo</span>
@@ -99,19 +99,23 @@
 <script>
 export default {
   name: "PxProductForm",
-  data() {
-    return {
-      product: {},
-      status: "",
-    };
-  },
   props: {
     actionBtn: String,
-    productData: Object,
+    product: Object,
   },
-  created() {
-    this.product = this.productData;
-    this.status = this.productData.status;
+  data() {
+    return {
+      form: {
+        name: this.product.name,
+        // image: this.product.image,
+        // slug: this.product.slug,
+        price: this.product.price,
+        description: this.product.description,
+        features: this.product.features,
+        // category_id: this.product.category_id,
+        status: this.product.status,
+      },
+    };
   },
 };
 </script>
