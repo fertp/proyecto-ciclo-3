@@ -3,7 +3,11 @@
     <h3 class="product-card__title">
       {{ product.name }}
     </h3>
-    <img src="@/assets/bici.jpg" :alt="product.name" class="product-card__img" />
+    <img
+      :src="require('@/assets/' + product.image)"
+      :alt="product.name"
+      class="product-card__img"
+    />
     <p class="product-card__price">
       {{ product.price }}
     </p>
