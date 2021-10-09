@@ -8,11 +8,7 @@
       :alt="product.name"
       class="product-card__img"
     /> -->
-    <img
-      :src="product.image"
-      :alt="product.name"
-      class="product-card__img"
-    />
+    <img :src="product.image" :alt="product.name" class="product-card__img" />
     <p class="product-card__price">
       {{ product.price }}
     </p>
@@ -65,10 +61,10 @@ export default {
     product: {},
   },
 
-  data () {
+  data() {
     return {
-      publicPath: process.env.BASE_URL
-    }
-  }
+      publicPath: process.env.BASE_URL,
+    };
+  },
 };
 </script>
