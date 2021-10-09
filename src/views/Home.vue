@@ -8,9 +8,7 @@
         <div class="productos__container">
           <h2 class="productos__title">PRODUCTOS DESTACADOS</h2>
           <div class="productos__grid">
-            
-              <px-product-card v-for="p in featuredProducts" :key="p.id" :product="p" />
-            
+            <px-product-card v-for="p in featuredProducts" :key="p._id" :product="p" />
           </div>
         </div>
       </section>
@@ -58,7 +56,9 @@
 import WebLayout from "@/layouts/WebLayout.vue";
 import PxCoverSlider from "@/components/PxCoverSlider.vue";
 import PxProductCard from "@/components/PxProductCard.vue";
-import productsJson from "@/productos.json";
+// import productsJson from "@/productos.json";
+// import axios from "axios";
+import api from "@/api.js";
 
 export default {
   name: "Home",
@@ -70,17 +70,18 @@ export default {
 
   data() {
     return {
-      // product: {
-      //   name: "Nombre producto",
-      //   image: "@/assets/bici.jpg",
-      //   price: "$29.900",
-      // },
       products: [],
     };
   },
 
+  // created() {
+  //   // this.products = productsJson;
+  // },
   created() {
-    this.products = productsJson;
+    api.getProducts().then((Response) => {
+      this.products = Response.data;
+      console.log(Response.data);
+    });
   },
 
   computed: {

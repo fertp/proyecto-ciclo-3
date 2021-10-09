@@ -1,9 +1,9 @@
-const url = "@/productos.json";
+import axios from "axios";
+
+const url = "http://localhost:4000/api/products/";
 
 const getProducts = () => {
-  return fetch(url)
-    .then((res) => res.json())
-    .then((res) => res.data);
+  return axios.get(url);
 };
 
 export default {
