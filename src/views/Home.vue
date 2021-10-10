@@ -8,7 +8,9 @@
         <div class="productos__container">
           <h2 class="productos__title">PRODUCTOS DESTACADOS</h2>
           <div class="productos__grid">
+
             <px-product-card v-for="p in featuredProducts" :key="p._id" :product="p" />
+
           </div>
         </div>
       </section>
@@ -56,8 +58,6 @@
 import WebLayout from "@/layouts/WebLayout.vue";
 import PxCoverSlider from "@/components/PxCoverSlider.vue";
 import PxProductCard from "@/components/PxProductCard.vue";
-// import productsJson from "@/productos.json";
-// import axios from "axios";
 import api from "@/api.js";
 
 export default {
@@ -73,26 +73,18 @@ export default {
       products: [],
     };
   },
-
-  // created() {
-  //   // this.products = productsJson;
-  // },
+  
   created() {
-    api.getProducts().then((Response) => {
-      this.products = Response.data;
-      console.log(Response.data);
-    });
+    api.getProducts().then((response) => {
+      this.products = response.data;
+      // console.log(response.data);
+    })
   },
 
   computed: {
-    featuredProducts() {
-      let featured = [];
-
-      for (let i = 0; i < 6; i++) {
-        featured.push(this.products[i]);
-      }
-
-      return featured;
+    featuredProducts: function () {
+      let featuredProducts = this.products.slice(0, 6);
+      return featuredProducts;
     },
   },
 };

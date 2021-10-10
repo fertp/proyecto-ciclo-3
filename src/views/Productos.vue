@@ -79,9 +79,11 @@
 </style>
 <script>
 import WebLayout from "@/layouts/WebLayout.vue";
-import productsJson from "@/productos.json";
+// import productsJson from "@/productos.json";
 import PxCategorias from "@/components/PxCategorias.vue";
 import PxProductCard from "@/components/PxProductCard.vue";
+import api from "@/api.js";
+
 export default {
   name: "Productos",
   components: {
@@ -97,7 +99,10 @@ export default {
   },
 
   created() {
-    this.products = productsJson;
+    api.getProducts().then((response) => {
+      this.products = response.data;
+      // console.log(response.data);
+    })
   },
 };
 </script>

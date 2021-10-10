@@ -1,7 +1,11 @@
 <template>
   <div>
     <section class="table-top">
-      <input type="text" class="table-top__search-box" placeholder="Buscar..." />
+      <input @input="$emit('search-products', query)"
+        v-model="query"
+        type="text" 
+        class="table-top__search-box" 
+        placeholder="Buscar..." />
       <div class="table-top__create-button">
         <span class="table-top__create-label">Crear Producto</span>
         <router-link to="/admin/create" class="primary-button button">Crear</router-link>
@@ -11,20 +15,20 @@
     <table class="products-table">
       <thead>
         <tr>
-          <th>ID</th>
+          <th>CATEGORÍA</th>
           <th>NOMBRE</th>
           <th colspan="2">ACCIONES</th>
         </tr>
       </thead>
       <tbody>
-        <tr v-for="p in products" :key="p.id">
-          <td class="product-table__id-column">{{ p.id }}</td>
+        <tr v-for="p in products" :key="p._id">
+          <td class="product-table__id-column">{{ p.category_id }}</td>
           <td>{{ p.name }}</td>
           <td class="container-table__celdaboton">
-            <router-link :to="`/admin/edit/${p.id}`" class="button boton-celda">Editar</router-link>
+            <router-link :to="`/admin/edit/${p._id}`" class="button boton-celda">Editar</router-link>
           </td>
           <td class="container-table__celdaboton">
-            <router-link to="/admin/show/1" class="button boton-celda">Ver</router-link>
+            <router-link :to="`/admin/show/${p._id}`" class="button boton-celda">Ver</router-link>
           </td>
         </tr>
       </tbody>
@@ -84,22 +88,19 @@
 }
 </style>
 <script>
-import productsJson from "@/productos.json";
-// import PxTableRow from "@/components/admin/PxTableRow.vue";
 
 export default {
   name: "PxTablaAdmin",
-  components: {
-    // PxTableRow,
+
+  props: {
+    products: []
   },
+
   data() {
     return {
-      producs: [],
+      query: ''
     };
   },
 
-  created() {
-    this.products = productsJson;
-  },
 };
 </script>

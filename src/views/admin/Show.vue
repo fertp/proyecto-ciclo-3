@@ -4,7 +4,7 @@
       <!-- row1 -->
       <div class="producto__grid">
         <div class="producto__img-box">
-          <img src="@/assets/bici.jpg" :alt="product.name" class="producto__img" />
+          <img :src="product.image" :alt="product.name" class="producto__img" />
         </div>
         <div class="producto__text">
           <h1 class="producto__title">{{ product.name }}</h1>
@@ -67,7 +67,7 @@
 
 <script>
 import AdminLayout from "@/layouts/AdminLayout.vue";
-import productsJson from "@/productos.json";
+import api from "@/api.js";
 
 export default {
   name: "Show",
@@ -87,9 +87,11 @@ export default {
   },
 
   created() {
-    this.product = productsJson.find((p) => {
-      return p.id == this.$route.params.id;
-    });
+    let id = this.$route.params.id;
+    api.getProduct(id).then((response) => {
+      this.product = response.data;
+      console.log(response.data)
+    })
   },
 };
 </script>

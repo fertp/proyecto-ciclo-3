@@ -5,10 +5,11 @@
         <!-- row1 -->
         <div class="producto__grid">
           <div class="producto__img-box">
-            <img src="@/assets/bici.jpg" :alt="product.name" class="producto__img" />
+            <img :src="product.image" :alt="product.name" class="producto__img" />
           </div>
           <div class="producto__text">
             <h1 class="producto__title">{{ product.name }}</h1>
+            <p>Precio:</p>
             <p class="producto__price">{{ formatedPrice }}</p>
           </div>
         </div>
@@ -70,7 +71,8 @@
 
 <script>
 import WebLayout from "@/layouts/WebLayout.vue";
-import productsJson from "@/productos.json";
+// import productsJson from "@/productos.json";
+import api from "@/api.js";
 
 export default {
   name: "Producto",
@@ -92,9 +94,13 @@ export default {
   },
 
   created() {
-    this.product = productsJson.find((p) => {
-      return p.slug === this.$route.params.slug;
-    });
+    // this.product = productsJson.find((p) => {
+    //   return p.slug === this.$route.params.slug;
+    // });
+    let slug = this.$route.params.slug;
+    api.getProductBySlug(slug).then((response) => {
+      this.product = response.data;
+    })
   },
 };
 </script>

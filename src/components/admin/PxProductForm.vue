@@ -18,12 +18,14 @@
         <textarea v-model="form.features" class="product-form__input" />
       </div>
       <div class="product-form__field">
-        <!-- <label>Categoría</label>
-      <select name="" id=""></select> -->
+        <label>Categoría</label>
+        <select v-model="form.category_id" name="" id="">
+          <option value="1">1</option>
+        </select>
       </div>
       <div class="product-form__field">
         <label>Imagen:</label>
-        <input type="file" v-bind:value="form.image" />
+        <input type="text" v-model="form.image" />
       </div>
       <div class="product-form__field">
         <label>Estado:</label>
@@ -53,7 +55,9 @@
       <div class="product-form__button">
         <!-- <button class="button" to="/admin">Cancelar</button> -->
         <router-link to="/admin" class="button">Cancelar</router-link>
-        <button class="primary-button button">{{ actionBtn }}</button>
+        <a href=""
+          class="primary-button button"
+          @click="validarForm($event)">{{ actionBtn }}</a>
       </div>
     </form>
   </div>
@@ -103,19 +107,37 @@ export default {
     actionBtn: String,
     product: Object,
   },
+
   data() {
     return {
       form: {
-        name: this.product.name,
-        // image: this.product.image,
-        // slug: this.product.slug,
-        price: this.product.price,
-        description: this.product.description,
-        features: this.product.features,
-        // category_id: this.product.category_id,
-        status: this.product.status,
+        name: this.product.name || null,
+        image: this.product.image || null,
+        slug: this.product.slug || null,
+        price: this.product.price || null,
+        description: this.product.description || null,
+        features: this.product.features || null,
+        category_id: this.product.category_id || null,
+        status: this.product.status || null,
       },
     };
   },
+
+  methods: {
+
+    validarForm(e) {
+      e.preventDefault();
+
+      if (this.form.name) {
+        let slug = this.form.name.replaceAll(' ', '-').toLowerCase();
+        slug.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "");
+
+        this.form.slug = slug;
+      };
+
+      this.$emit('form-submit', this.form);
+    }
+
+  }
 };
 </script>

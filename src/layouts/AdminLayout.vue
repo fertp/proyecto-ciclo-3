@@ -67,6 +67,7 @@ export default {
   color: #444;
   border-radius: 4px;
   text-decoration: none;
+  cursor: pointer;
 }
 .primary-button {
   background-color: #000;
