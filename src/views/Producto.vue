@@ -30,8 +30,18 @@
           </div>
         </div>
 
-        <!-- TODO -->
-        <!-- SECTION CON PRODUCTOS RELACIONADOS -->
+        <!-- Productos relacionados -->
+        <section class="productos">
+          <h1 class="productos__title">Productos relacionados</h1>
+          <div 
+            v-if="products"
+            class="productos__grid">
+          
+            <px-product-card v-for="p in products" :key="p.id" :product="p"></px-product-card>
+          
+          </div>
+        </section>
+
       </div>
     </main>
   </web-layout>

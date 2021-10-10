@@ -5,6 +5,7 @@ import Home from "@/views/Home.vue";
 import Productos from "@/views/Productos.vue";
 import Nosotros from "@/views/Nosotros.vue";
 import Producto from "@/views/Producto.vue";
+import Categoria from "@/views/Categoria.vue";
 import Error from "@/views/Error.vue";
 
 Vue.use(VueRouter);
@@ -32,6 +33,12 @@ const routes = [
     path: "/productos/:slug",
     name: "producto",
     component: Producto,
+  },
+
+  {
+    path: "/categoria/:slug",
+    name: "categoria",
+    component: Categoria,
   },
 
   {
