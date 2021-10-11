@@ -1,43 +1,50 @@
 <template>
-  <div class="container-categoria">
-    <h2 class="container-categorias__title">precios</h2>
-    <ul class="container-categoria__list">
-      <li>
-        <input type="checkbox" id="precios-bajos" />
-        <label for="precios-bajos">categoria 1</label>
-      </li>
-      <li>
-        <input type="checkbox" id="precios-altos" />
-        <label for="precios-altos">categoria 2</label>
-      </li>
-      <li>
-        <input type="checkbox" id="mejores-precios" />
-        <label for="mejores-precios">categoria 3</label>
-      </li>
-    </ul>
-    <h2 class="container-categorias__title">tipo</h2>
-    <ul class="container-categoria__list">
-      <li>
-        <input type="checkbox" id="urbana" />
-        <label for="urbana">categoria 4</label>
-      </li>
-      <li>
-        <input type="checkbox" id="todo-terreno" />
-        <label for="todo-terreno">categoria 2</label>
-      </li>
-      <li>
-        <input type="checkbox" id="montañismo" />
-        <label for="montañismo">categoria 3</label>
+  <div class="categories">
+    <ul class="categories__list">
+      <li class="categories__item"
+        v-for="c in categories" :key="c._id">
+
+        <router-link :to="{ name: 'categoria', params: { slug: c.slug } }">{{ c.name }}</router-link>
+
       </li>
     </ul>
   </div>
 </template>
-<style>
-.container-categoria__list {
+<style scoped>
+.categories {
+  margin-top: 32px;
+  width: 100%;
+  padding: 30px;
+  background: #efefef;
+  border-radius: 8px;
+  box-sizing: border-box;
+  box-shadow: 0 0 2px #ccc;
+}
+.categories__list {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
-.container-categorias__title {
-  font-size: 17px;
+.categories__item {
+  padding: 8px 0;
+}
+.categories__item a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+.categories__item a:hover {
+  color: #888;
 }
 </style>
+
+<script>
+export default {
+  name: "PxCategorias",
+
+  props: {
+    categories: []
+  }
+}
+</script>

@@ -2,141 +2,143 @@
     {
         "id": 1,
         "name":"Biciclita Todo Terreno", 
-        "image":"",
+        "image":"http://localhost:4000/images/products/bici-1.jpg",
         "slug": "biciclita-todo-terreno",
         "price":800000,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
         "features": "features de este producto.",
-        "category_id": 1
+        "category_id": 1,
+        "status": "inactivo"
     },
     {
         "id": 2,
         "name":"Bicicletas de Ruta", 
-        "image":"",
+        "image":"http://localhost:4000/images/products/bici-2.jpg",
         "slug": "bicicletas-de-ruta",
         "price":1000000,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
         "features": "features de este producto.",
-        "category_id": 1
+        "category_id": 1,
+        "status": "activo"
     },
 
     {
         "id": 3,
         "name":"Bicicletas de Triatlón y Contrarreloj", 
-        "image":"",
+        "image":"http://localhost:4000/images/products/bici-3.jpg",
         "slug": "bicicletas-de-triatlón-y-contrarreloj",
         "price":2000000,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
         "features": "features de este producto.",
-        "category_id": 1
+        "category_id": 1,
+        "status": "activo"
     },
 
     {
         "id": 4,
         "name":"Bicicletas para Ruta de Barra Plana", 
-        "image":"",
+        "image":"http://localhost:4000/images/products/bici-4.jpg",
         "slug": "bicicletas-para-ruta-de-barra-plana",
         "price":2500000, 
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
         "features": "features de este producto.",
-        "category_id": 1
+        "category_id": 1,
+        "status": "activo"
     },
 
     {
         "id": 5,
         "name":"Bicicletas de Ciclomontañismo o MTB",
-        "image":"",
+        "image":"http://localhost:4000/images/products/bici-5.jpg",
         "slug": "bicicletas-de-ciclomontañismo-o-mtb",
          "price":3500000, 
          "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
          "features": "features de este producto.",
-         "category_id": 1
+         "category_id": 1,
+         "status": "activo"
     },
 
     {
         "id": 6,
         "name":"Bicicletas de Cyclocross", 
-        "image":"",
+        "image":"http://localhost:4000/images/products/bici-6.jpg",
         "slug": "bicicletas-de-cyclocross",
         "price":3500000, 
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
         "features": "features de este producto.",
-        "category_id": 1
+        "category_id": 1,
+        "status": "activo"
     },
 
     {
         "id": 7,
         "name":"Bicicletas de Gravilla o Gravel",
-        "image":"",
+        "image":"http://localhost:4000/images/products/bici-7.jpg",
         "slug": "bicicletas-de-gravilla-o-gravel",
         "price":2200000,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
         "features": "features de este producto.",
-        "category_id": 1
+        "category_id": 1,
+        "status": "activo"
     },
     
     {
         "id": 8,
         "name":"Bicicletas Plegables",
-        "image":"",
+        "image":"http://localhost:4000/images/products/bici-8.jpg",
         "slug": "bicicletas-plegables",
         "price":2000000,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
         "features": "features de este producto.",
-        "category_id": 1
+        "category_id": 1,
+        "status": "activo"
     },
 
     {
         "id": 9,
         "name":"Bicicletas de BMX",
-        "image":"",
+        "image":"http://localhost:4000/images/products/bici-9.jpg",
         "slug": "bicicletas-de-bmx",
         "price":2000000,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
         "features": "features de este producto.",
-        "category_id": 1
+        "category_id": 1,
+        "status": "activo"
     },
 
     {
         "id": 10,
         "name":"Fixies' o Bicicletas de una Velocidad",
-        "image":"",
+        "image":"http://localhost:4000/images/products/bici-10.jpg",
         "slug": "fixies-o-bicicletas-de-una-velocidad",
         "price":1500000,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
         "features": "features de este producto.",
-        "category_id": 1
+        "category_id": 1,
+        "status": "activo"
     },
 
     {
         "id": 11,
         "name":"Bicicletas de Pista o Circuito",
-        "image":"",
+        "image":"http://localhost:4000/images/products/bici-11.jpg",
         "slug": "bicicletas-de-pista-o-circuito",
         "price":3100000,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
         "features": "features de este producto.",
-        "category_id": 1
+        "category_id": 1,
+        "status": "activo"
     },
 
     {
         "id": 12,
         "name":"Bicicletas Eléctricas y Pedelec",
-        "image":"",
+        "image":"http://localhost:4000/images/products/bici-12.jpg",
         "slug": "bicicletas-eléctricas-y-pedelec",
         "price":3500000,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
         "features": "features de este producto.",
-        "category_id": 1
-    },
-    {
-        "id": 13,
-        "name":"Bicicletas de Paseo",
-        "image":"",
-        "slug": "bicicletas-de-paseo",
-        "price":800000,
-        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, vero. Porro, culpa numquam ut iure repellat rem quidem fugiat soluta velit harum atque ratione alias, et, perferendis libero. Distinctio, quibusdam?",
-        "features": "features de este producto.",
-        "category_id": 1
+        "category_id": 1,
+        "status": "activo"
     }
 ]

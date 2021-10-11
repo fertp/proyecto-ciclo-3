@@ -1,32 +1,65 @@
-import Index from "@/views/admin/Index.vue";
-import Create from "@/views/admin/Create.vue";
-import Edit from "@/views/admin/Edit.vue";
-import Show from "@/views/admin/Show.vue";
+import Vue from "vue";
+import VueRouter from "vue-router";
 
-const adminRoutes = [
+import Index from "@/views/admin/Index.vue";
+
+import ProductIndex from "@/views/admin/products/Index.vue";
+import Create from "@/views/admin/products/Create.vue";
+import Edit from "@/views/admin/products/Edit.vue";
+import Show from "@/views/admin/products/Show.vue";
+
+import CategoriasIndex from "@/views/admin/categories/Index.vue";
+
+Vue.use(VueRouter);
+
+const routes = [
   {
     path: "/admin",
-    name: "adminIndex",
+    name: "admin",
     component: Index,
   },
 
   {
-    path: "/admin/create",
-    name: "adminCreate",
+    path: "/admin/productos/",
+    name: "productsIndex",
+    component: ProductIndex,
+  },
+
+  {
+    path: "/admin/productos/create",
+    name: "productsCreate",
     component: Create,
   },
 
   {
-    path: "/admin/edit/:id",
-    name: "adminEdit",
+    path: "/admin/productos/edit/:id",
+    name: "productsEdit",
     component: Edit,
   },
 
   {
-    path: "/admin/show/:id",
-    name: "adminShow",
+    path: "/admin/productos/show/:id",
+    name: "productsShow",
     component: Show,
+  },
+
+  {
+    path: "/admin/categorias",
+    name: "categorias",
+    component: CategoriasIndex,
+  },
+
+  {
+    path: "/admin/*",
+    name: "error",
+    component: Error,
   },
 ];
 
-export default adminRoutes;
+const router = new VueRouter({
+  mode: "history",
+  base: process.env.BASE_URL,
+  routes,
+});
+
+export default router;

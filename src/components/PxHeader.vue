@@ -2,7 +2,9 @@
   <header class="site-heeader">
     <div class="site-header__container">
       <div class="header-logo">
-        <img src="../assets/bicicleta.svg" alt="" class="header-logo__img" />
+        <router-link to="/">
+          <img src="../assets/bicicleta.svg" alt="" class="header-logo__img" />
+        </router-link>
       </div>
       <nav class="site-nav">
         <ul :class="[showMenu ? 'site-nav__list--show' : '', 'site-nav__list']">
@@ -25,8 +27,12 @@
 </template>
 
 <style>
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .site-heeader {
-  position: absolute;
   background: #fff;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
   padding: 0 30px;
@@ -35,7 +41,6 @@
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 99;
 }
 .site-header__container {
   display: flex;
@@ -114,13 +119,4 @@ export default {
     },
   },
 };
-// addEventListener("DOMContentLoaded", () => {
-//   const btn_menu = document.querySlector(".btn_menu");
-//   if (btn_menu) {
-//     btn_menu.addEventListener("click", () => {
-//       const menu_items = document.querySelector(".site-nav__list");
-//       menu_items.classList.toggle("show");
-//     });
-//   }
-// });
 </script>

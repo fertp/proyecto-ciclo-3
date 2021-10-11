@@ -3,24 +3,29 @@
     <h3 class="product-card__title">
       {{ product.name }}
     </h3>
-    <img src="@/assets/bici.jpg" :alt="product.name" class="product-card__img" />
-    <p class="product-card__price">
-      {{ product.price }}
-    </p>
-    <!-- Esto va dentro de un router-link -->
-    <router-link
-      :to="{ name: 'producto', params: { slug: product.slug, id: product.id } }"
-      class="product-card__button"
-    >
-      VER PRODUCTO
-    </router-link>
+    <div>
+      <img :src="product.image" :alt="product.name" class="product-card__img" />
+      <p class="product-card__price">
+        {{ product.price }}
+      </p>
+      <router-link
+        :to="{ name: 'producto', params: { slug: product.slug, id: product.id } }"
+        class="product-card__button">
+        VER PRODUCTO
+      </router-link>
+    </div>
   </article>
 </template>
 
 <style scoped>
 .product-card {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  height: 100%;
   padding-bottom: 30px;
+  box-sizing: border-box;
   border-radius: 4px;
   box-shadow: 0 0 2px #ccc;
   text-align: center;
@@ -56,10 +61,10 @@ export default {
     product: {},
   },
 
-  // methods: {
-  //   getImagePath(img) {
-  //     return require(`@/assets/${img}`);
-  //   },
-  // },
+  data() {
+    return {
+      publicPath: process.env.BASE_URL,
+    };
+  },
 };
 </script>
