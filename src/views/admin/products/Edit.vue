@@ -1,22 +1,29 @@
 <template>
   <admin-layout>
+
     <h1>EDITAR PRODUCTO</h1>
-    <div v-if="product.name">
+
+    <!-- Edit-form -->
+    <px-module v-if="product.name">
       <px-product-form
         actionBtn="Guardar"
         :product="product"
         @form-submit="updateProduct"
-        :categories="categories"
-      />
-    </div>
-    <px-delete-product-form />
+        :categories="categories" />
+    </px-module>
+    
+    <!-- Delete-form -->
+    <px-module>
+      <px-delete-product-form />
+    </px-module>
+
   </admin-layout>
 </template>
 
 <script>
 import AdminLayout from "@/layouts/AdminLayout.vue";
+import PxModule from "@/components/admin/PxModule.vue";
 import PxProductForm from "@/components/admin/PxProductForm.vue";
-
 import PxDeleteProductForm from "@/components/admin/PxDeleteProductForm.vue";
 // import productsJson from "@/productos.json";
 import api from "@/api.js";
@@ -27,6 +34,7 @@ export default {
     AdminLayout,
     PxProductForm,
     PxDeleteProductForm,
+    PxModule
   },
 
   data() {

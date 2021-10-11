@@ -9,6 +9,7 @@
           </div>
         </aside>
         <section class="productos">
+          <h1 class="productos__title">Productos</h1>
           <div class="productos__grid">
             <px-product-card v-for="p in products" :key="p.id" :product="p"></px-product-card>
           </div>
@@ -35,14 +36,6 @@
   display: block;
   font-size: 15px;
   width: 100%;
-}
-.aside-categorias__container {
-  background: #ccc;
-  width: 100%;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  padding: 10px;
-  box-sizing: border-box;
 }
 .aside-categorias__title {
   font-size: 20px;

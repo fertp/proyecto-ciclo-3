@@ -42,16 +42,31 @@ const getCategories = () => {
   return axios.get(`${url}categories/`);
 };
 
+const storeCategory = (category) => {
+  return axios.post(`${url}categories/store`, category);
+}
+
+const updateCategory = (id, category) => {
+  return axios.put(`${url}categories/update/${id}`, category);
+}
+
+const deleteCategory = (id) => {
+  return axios.delete(`${url}categories/delete/${id}`)
+}
+
 export default {
   // products
   getProducts,
   getProduct,
   getProductBySlug,
   getProductsByQuery,
+  getProductsByCategory,
   storeProduct,
   updateProduct,
   deleteProduct,
   // categories
   getCategories,
-  getProductsByCategory,
+  storeCategory,
+  updateCategory,
+  deleteCategory,
 };

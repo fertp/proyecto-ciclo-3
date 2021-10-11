@@ -54,7 +54,7 @@
       </div>
       <div class="product-form__button">
         <!-- <button class="button" to="/admin">Cancelar</button> -->
-        <router-link to="/admin" class="button">Cancelar</router-link>
+        <router-link to="/admin/productos" class="button">Cancelar</router-link>
         <a href="" class="primary-button button" @click="validarForm($event)">{{ actionBtn }}</a>
       </div>
     </form>
@@ -62,14 +62,6 @@
 </template>
 
 <style scoped>
-.product-form {
-  width: 100%;
-  max-width: 720px;
-  padding: 30px;
-  box-sizing: border-box;
-  box-shadow: 0 0 4px #ccc;
-  margin-top: 30px;
-}
 .product-form__field {
   margin-bottom: 12px;
   display: grid;

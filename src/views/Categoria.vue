@@ -37,14 +37,6 @@
   font-size: 15px;
   width: 100%;
 }
-.aside-categorias__container {
-  background: #ccc;
-  width: 100%;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  padding: 10px;
-  box-sizing: border-box;
-}
 .aside-categorias__title {
   font-size: 20px;
   line-height: 0;

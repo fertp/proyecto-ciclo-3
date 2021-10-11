@@ -8,7 +8,7 @@
         placeholder="Buscar..." />
       <div class="table-top__create-button">
         <span class="table-top__create-label">Crear Producto</span>
-        <router-link to="/admin/create" class="primary-button button">Crear</router-link>
+        <router-link to="/admin/productos/create" class="primary-button button">Crear</router-link>
       </div>
     </section>
     <!-- products-table -->
@@ -25,10 +25,10 @@
           <td class="product-table__id-column">{{ p.category_id }}</td>
           <td>{{ p.name }}</td>
           <td class="container-table__celdaboton">
-            <router-link :to="`/admin/edit/${p._id}`" class="button boton-celda">Editar</router-link>
+            <router-link :to="`/admin/productos/edit/${p._id}`" class="button boton-celda">Editar</router-link>
           </td>
           <td class="container-table__celdaboton">
-            <router-link :to="`/admin/show/${p._id}`" class="button boton-celda">Ver</router-link>
+            <router-link :to="`/admin/productos/show/${p._id}`" class="button boton-celda">Ver</router-link>
           </td>
         </tr>
       </tbody>

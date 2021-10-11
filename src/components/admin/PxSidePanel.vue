@@ -3,10 +3,16 @@
     <nav class="side-panel__nav">
       <ul class="side-panel__list">
         <li class="side-panel__item">
-          <router-link to="/admin" class="side-panel__link">Productos</router-link>
+          <router-link to="/admin" class="side-panel__link">Admin</router-link>
         </li>
         <li class="side-panel__item">
-          <router-link to="/admin" class="side-panel__link">Usuarios</router-link>
+          <router-link to="/admin/productos" class="side-panel__link">Productos</router-link>
+        </li>
+        <li class="side-panel__item">
+          <router-link to="/admin/categorias" class="side-panel__link">Categorías</router-link>
+        </li>
+        <li class="side-panel__item">
+          <router-link to="/admin/usuarios" class="side-panel__link">Usuarios</router-link>
         </li>
       </ul>
       <ul class="side-panel__list">
