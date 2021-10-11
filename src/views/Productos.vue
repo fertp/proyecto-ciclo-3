@@ -18,7 +18,7 @@
   </web-layout>
 </template>
 
-<style scoped>
+<style>
 .productos-page {
   padding: 80px 30px 0;
   box-sizing: border-box;
@@ -94,22 +94,17 @@ export default {
   data() {
     return {
       products: [],
-      categories: []
+      categories: [],
     };
   },
 
   created() {
-    
-    api.getProducts()
-    .then((response) => {
+    api.getProducts().then((response) => {
       this.products = response.data;
     }),
-
-    api.getCategories()
-    .then(response => {
-      this.categories = response.data
-    })
-
+      api.getCategories().then((response) => {
+        this.categories = response.data;
+      });
   },
 };
 </script>

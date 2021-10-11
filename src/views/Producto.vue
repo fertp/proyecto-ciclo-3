@@ -31,17 +31,16 @@
         </div>
 
         <!-- Productos relacionados -->
-        <section class="productos">
+        <section v-if="relatedProducts" class="productos">
           <h1 class="productos__title">Productos relacionados</h1>
-          <div 
-            v-if="products"
-            class="productos__grid">
-          
-            <px-product-card v-for="p in products" :key="p.id" :product="p"></px-product-card>
-          
+          <div class="productos__grid">
+            <px-product-card
+              v-for="p in relatedProducts"
+              :key="p._id"
+              :product="p"
+            ></px-product-card>
           </div>
         </section>
-
       </div>
     </main>
   </web-layout>
@@ -81,6 +80,7 @@
 
 <script>
 import WebLayout from "@/layouts/WebLayout.vue";
+import PxProductCard from "@/components/PxProductCard.vue";
 // import productsJson from "@/productos.json";
 import api from "@/api.js";
 
@@ -88,11 +88,13 @@ export default {
   name: "Producto",
   components: {
     WebLayout,
+    PxProductCard,
   },
 
   data() {
     return {
       product: {},
+      relatedProducts: [],
     };
   },
 
@@ -108,9 +110,21 @@ export default {
     //   return p.slug === this.$route.params.slug;
     // });
     let slug = this.$route.params.slug;
-    api.getProductBySlug(slug).then((response) => {
-      this.product = response.data;
-    })
+    api
+      .getProductBySlug(slug)
+      .then((response) => {
+        this.product = response.data;
+      })
+      .then(() => {
+        this.getProduct(this.product.category_id);
+      });
+  },
+  methods: {
+    getProduct(id) {
+      api.getProductsByCategory(id).then((response) => {
+        this.relatedProducts = response.data;
+      });
+    },
   },
 };
 </script>

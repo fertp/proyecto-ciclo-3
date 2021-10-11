@@ -20,7 +20,7 @@
       <div class="product-form__field">
         <label>Categoría</label>
         <select v-model="form.category_id" name="" id="">
-          <option value="1">1</option>
+          <option :value="c._id" v-for="c in categories" :key="c._id">{{ c.name }}</option>
         </select>
       </div>
       <div class="product-form__field">
@@ -55,9 +55,7 @@
       <div class="product-form__button">
         <!-- <button class="button" to="/admin">Cancelar</button> -->
         <router-link to="/admin" class="button">Cancelar</router-link>
-        <a href=""
-          class="primary-button button"
-          @click="validarForm($event)">{{ actionBtn }}</a>
+        <a href="" class="primary-button button" @click="validarForm($event)">{{ actionBtn }}</a>
       </div>
     </form>
   </div>
@@ -106,6 +104,7 @@ export default {
   props: {
     actionBtn: String,
     product: Object,
+    categories: [],
   },
 
   data() {
@@ -124,20 +123,18 @@ export default {
   },
 
   methods: {
-
     validarForm(e) {
       e.preventDefault();
 
       if (this.form.name) {
-        let slug = this.form.name.replaceAll(' ', '-').toLowerCase();
+        let slug = this.form.name.replaceAll(" ", "-").toLowerCase();
         slug.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "");
 
         this.form.slug = slug;
-      };
+      }
 
-      this.$emit('form-submit', this.form);
-    }
-
-  }
+      this.$emit("form-submit", this.form);
+    },
+  },
 };
 </script>

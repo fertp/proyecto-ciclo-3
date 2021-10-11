@@ -5,19 +5,13 @@
         <aside class="aside-categoria">
           <h1 class="aside-categorias__title">Categorias</h1>
           <div class="aside-categorias__container">
-            
             <px-categorias :categories="categories" />
-
           </div>
         </aside>
         <section class="productos">
           <h1 class="productos__title">{{ category.name }}</h1>
-          <div 
-            v-if="products"
-            class="productos__grid">
-          
+          <div v-if="products" class="productos__grid">
             <px-product-card v-for="p in products" :key="p.id" :product="p"></px-product-card>
-          
           </div>
         </section>
       </div>
@@ -102,48 +96,42 @@ export default {
     return {
       products: [],
       category: {},
-      categories: []
+      categories: [],
     };
   },
 
   created() {
-
     this.getCategories();
-
   },
 
   methods: {
-
     getCategories() {
-      api.getCategories()
-      .then(response => {
-        this.categories = response.data;
-      })
-      .then(() => {
-        this.category = this.categories.find( c => {
-          return c.slug == this.$route.params.slug
+      api
+        .getCategories()
+        .then((response) => {
+          this.categories = response.data;
         })
-      })
-      .then(() => {
-        this.getProducts( this.category._id )
-      })
+        .then(() => {
+          this.category = this.categories.find((c) => {
+            return c.slug == this.$route.params.slug;
+          });
+        })
+        .then(() => {
+          this.getProducts(this.category._id);
+        });
     },
 
     getProducts(id) {
-      api.getProductsByCategory(id)
-      .then((response) => {
+      api.getProductsByCategory(id).then((response) => {
         this.products = response.data;
       });
-
-    }
+    },
   },
 
   watch: {
-
     $route() {
-      this.getCategories()
-    }
-
-  }
+      this.getCategories();
+    },
+  },
 };
 </script>

@@ -1,11 +1,13 @@
 <template>
   <admin-layout>
     <h1>EDITAR PRODUCTO</h1>
-    <div v-if="dataSetted">
-      <px-product-form 
-        actionBtn="Guardar" 
-        :product="product" 
-        @form-submit="updateProduct" />
+    <div v-if="product.name">
+      <px-product-form
+        actionBtn="Guardar"
+        :product="product"
+        @form-submit="updateProduct"
+        :categories="categories"
+      />
     </div>
     <px-delete-product-form />
   </admin-layout>
@@ -21,16 +23,16 @@ import api from "@/api.js";
 
 export default {
   name: "Edit",
-  components: { 
-    AdminLayout, 
-    PxProductForm, 
-    PxDeleteProductForm 
+  components: {
+    AdminLayout,
+    PxProductForm,
+    PxDeleteProductForm,
   },
 
   data() {
     return {
       product: {},
-      dataSetted: false,
+      categories: [],
     };
   },
 
@@ -38,19 +40,20 @@ export default {
     let id = this.$route.params.id;
     api.getProduct(id).then((response) => {
       this.product = response.data;
-      // console.log(response.data)
-      this.dataSetted = true
-    })
+    });
+    api.getCategories().then((response) => {
+      this.categories = response.data;
+    });
   },
-  
+
   methods: {
     updateProduct(product) {
       let id = this.$route.params.id;
-      api.updateProduct(id, product)
-      .then(() => {
-        this.$router.push('/admin', alert('El producto se actualizó correctamente.'))
-      })
-    }
-  }
+      api.updateProduct(id, product).then((response) => {
+        this.$router.push("/admin", alert("El producto se actualizó correctamente."));
+        console.log(response);
+      });
+    },
+  },
 };
 </script>
