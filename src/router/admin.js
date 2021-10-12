@@ -8,6 +8,8 @@ import Create from "@/views/admin/products/Create.vue";
 import Edit from "@/views/admin/products/Edit.vue";
 import Show from "@/views/admin/products/Show.vue";
 
+import Imagen from "@/views/admin/Image.vue";
+
 import CategoriasIndex from "@/views/admin/categories/Index.vue";
 
 Vue.use(VueRouter);
@@ -47,6 +49,12 @@ const routes = [
     path: "/admin/categorias",
     name: "categorias",
     component: CategoriasIndex,
+  },
+
+  {
+    path: "/admin/image",
+    name: "image",
+    component: Imagen
   },
 
   {

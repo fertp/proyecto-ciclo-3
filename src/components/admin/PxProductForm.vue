@@ -23,9 +23,10 @@
           <option :value="c._id" v-for="c in categories" :key="c._id">{{ c.name }}</option>
         </select>
       </div>
+      <!-- image -->
       <div class="product-form__field">
         <label>Imagen:</label>
-        <input type="text" v-model="form.image" />
+        <input type="file" name="image" />
       </div>
       <div class="product-form__field">
         <label>Estado:</label>
