@@ -41,6 +41,7 @@ body {
   position: fixed;
   width: 100%;
   top: 0;
+  z-index: 999;
 }
 .site-header__container {
   display: flex;

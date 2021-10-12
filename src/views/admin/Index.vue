@@ -1,7 +1,7 @@
 <template>
   <admin-layout> 
     
-    Este es el admin
+    <h1 style="color:red;background:yellow">ACÁ HAY QUE PONER ALGO LINDO.</h1>
 
   </admin-layout>
 </template>

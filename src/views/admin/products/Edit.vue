@@ -58,7 +58,7 @@ export default {
     updateProduct(product) {
       let id = this.$route.params.id;
       api.updateProduct(id, product).then((response) => {
-        this.$router.push("/admin", alert("El producto se actualizó correctamente."));
+        this.$router.push("/admin/productos", alert("El producto se actualizó correctamente."));
         console.log(response);
       });
     },

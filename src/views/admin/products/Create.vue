@@ -36,7 +36,7 @@ export default {
   methods: {
     storeProduct(product) {
       api.storeProduct(product).then(() => {
-        this.$router.push("/admin", alert("El producto se creó correctamente."));
+        this.$router.push("/admin/productos", alert("El producto se creó correctamente."));
       });
     },
   },

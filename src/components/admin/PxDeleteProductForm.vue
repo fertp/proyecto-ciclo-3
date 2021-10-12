@@ -28,7 +28,7 @@ export default {
         let id = this.$route.params.id;
         api.deleteProduct(id)
         .then(response => {
-          this.$router.push('/admin', alert('El producto: ' + response.data.name + ' ha sido eliminado.'))
+          this.$router.push('/admin/productos', alert('El producto: ' + response.data.name + ' ha sido eliminado.'))
         })
       }
     }
