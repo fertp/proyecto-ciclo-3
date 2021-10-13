@@ -2,8 +2,8 @@
   <admin-layout> 
     
     <h1>Imagen</h1>
-    <form  @submit.prevent="enviarArchivo">
-      <input type="file" name="image" @change="cargaArchivo">
+    <form @submit.prevent="enviarArchivo">
+      <input type="file" ref="file" name="image" @change="cargaArchivo">
       <button type="submit">Enviar</button>
     </form>
 
@@ -20,23 +20,29 @@ export default {
 
   data() {
     return {
-      image: null,
-      formData: null
+      file: null,
+      // formData: null
     };
   },
 
   methods: {
-    cargaArchivo(e) {
-      const file = e.target.files[0];
-      const formData = new FormData();
-      formData.append("img", file);
-      formData.append("_method", "PUT");
-      this.formData = formData;
+    cargaArchivo() {
+      this.file = this.$refs.file.files[0]
+      // console.log(this.file)
     },
 
     enviarArchivo() {
-      axios.post("http://localhost:4000/apì/images/store", this.formData)
-      .then(r => console.log(r))
+      let formData = new FormData();
+      formData.append("image", this.file, this.file.name);
+
+      axios.post(
+        "http://localhost:4000/api/images/store", 
+        formData, 
+        { headers: { 
+          'Content-Type': 'multipart/form-data' }}
+        )
+      .then(r => console.log(r.data.fileCreated))
+      .catch(error => console.error("Falló" + error))
     }
   }
 
