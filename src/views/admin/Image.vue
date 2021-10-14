@@ -21,28 +21,21 @@ export default {
   data() {
     return {
       file: null,
-      // formData: null
     };
   },
 
   methods: {
     cargaArchivo() {
       this.file = this.$refs.file.files[0]
-      // console.log(this.file)
     },
 
     enviarArchivo() {
       let formData = new FormData();
       formData.append("image", this.file, this.file.name);
 
-      axios.post(
-        "http://localhost:4000/api/images/store", 
-        formData, 
-        { headers: { 
-          'Content-Type': 'multipart/form-data' }}
-        )
+      axios.post("http://localhost:4000/api/images/store", formData)
       .then(r => console.log(r.data.fileCreated))
-      .catch(error => console.error("Falló" + error))
+      .catch(error => console.error("Falló: " + error))
     }
   }
 

@@ -34,11 +34,30 @@ export default {
   },
 
   methods: {
-    storeProduct(product) {
+    storeProduct(product, file = null) {
+      if (file) {
+        this.storeProductImage(product, file)
+        }
+      else {
+        this.storeProductInfo(product)
+      }
+    },
+
+    storeProductImage(product, file) {
+      let formData = new FormData();
+      formData.append("image", file, file.name);
+      api.storeFile(formData)
+      .then(r => { product.image = `http://localhost:4000/${r.data.path}` })
+      .then(() => {
+        this.storeProductInfo(product)
+      })
+    },
+
+    storeProductInfo(product) {
       api.storeProduct(product).then(() => {
         this.$router.push("/admin/productos", alert("El producto se creó correctamente."));
       });
-    },
+    }
   },
 };
 </script>

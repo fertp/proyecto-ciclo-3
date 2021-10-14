@@ -54,6 +54,12 @@ const deleteCategory = (id) => {
   return axios.delete(`${url}categories/delete/${id}`)
 }
 
+// Files
+
+const storeFile = (formData) => {
+  return axios.post(`${url}images/store`, formData)
+}
+
 export default {
   // products
   getProducts,
@@ -69,4 +75,6 @@ export default {
   storeCategory,
   updateCategory,
   deleteCategory,
+  // file
+  storeFile,
 };

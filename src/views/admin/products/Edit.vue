@@ -4,7 +4,7 @@
     <h1>EDITAR PRODUCTO</h1>
 
     <!-- Edit-form -->
-    <px-module v-if="product.name">
+    <px-module v-if="product">
       <px-product-form
         actionBtn="Guardar"
         :product="product"
@@ -25,7 +25,6 @@ import AdminLayout from "@/layouts/AdminLayout.vue";
 import PxModule from "@/components/admin/PxModule.vue";
 import PxProductForm from "@/components/admin/PxProductForm.vue";
 import PxDeleteProductForm from "@/components/admin/PxDeleteProductForm.vue";
-// import productsJson from "@/productos.json";
 import api from "@/api.js";
 
 export default {
@@ -39,7 +38,7 @@ export default {
 
   data() {
     return {
-      product: {},
+      product: null,
       categories: [],
     };
   },
@@ -55,13 +54,30 @@ export default {
   },
 
   methods: {
-    updateProduct(product) {
+    updateProduct(product, file = null) {
+
+      if (file) {
+        let formData = new FormData();
+        formData.append("image", file, file.name);
+        api.storeFile(formData)
+        .then(r => { product.image = `http://localhost:4000/${r.data.path}` })
+        .then(() => {
+          this.updateProductInfo(product)
+        })
+      }
+      else {
+        this.updateProductInfo(product)
+      }
+
+    },
+
+    updateProductInfo(product) {
       let id = this.$route.params.id;
       api.updateProduct(id, product).then((response) => {
         this.$router.push("/admin/productos", alert("El producto se actualizó correctamente."));
         console.log(response);
       });
-    },
+    }
   },
 };
 </script>

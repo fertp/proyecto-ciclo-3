@@ -4,7 +4,7 @@
     <h1>Categorías</h1>
     
     <!-- tabla -->
-    <px-module>
+    <px-module v-if="categories[0]">
 
       <table class="categories-table">
       <thead>

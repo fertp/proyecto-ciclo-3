@@ -1,6 +1,6 @@
 <template>
   <div class="product-form">
-    <form action="">
+    <form @submit.prevent="submitForm($event)">
       <div class="product-form__field">
         <label>Nombre:</label>
         <input type="text" v-model="form.name" class="product-form__input" />
@@ -26,7 +26,22 @@
       <!-- image -->
       <div class="product-form__field">
         <label>Imagen:</label>
-        <input type="file" name="image" />
+        <div>
+          <img 
+            class="product-form__image"
+            v-if="form.image" 
+            :src="form.image" />
+          <input 
+            type="file" 
+            name="image" 
+            ref="newFile"
+            @change="loadImage"
+            hidden/>
+          <button 
+            type="button" 
+            class="button" 
+            @click="$refs.newFile.click()" >Seleccionar imagen</button>
+        </div>
       </div>
       <div class="product-form__field">
         <label>Estado:</label>
@@ -56,41 +71,12 @@
       <div class="product-form__button">
         <!-- <button class="button" to="/admin">Cancelar</button> -->
         <router-link to="/admin/productos" class="button">Cancelar</router-link>
-        <a href="" class="primary-button button" @click="validarForm($event)">{{ actionBtn }}</a>
+        <button type="submit" class="primary-button button" >{{ actionBtn }}</button>
       </div>
     </form>
   </div>
 </template>
 
-<style scoped>
-.product-form__field {
-  margin-bottom: 12px;
-  display: grid;
-  grid-template-columns: 200px auto;
-  align-items: center;
-}
-.product-form__field > label {
-  font-weight: bold;
-}
-.product-form__input {
-  width: 100%;
-  display: block;
-}
-.product-form__radio {
-  display: block;
-  margin-bottom: 4px;
-}
-.product-form__radio-button {
-  margin-right: 8px;
-}
-.product-form__button {
-  display: flex;
-  justify-content: flex-end;
-}
-.product-form__button .button {
-  margin-left: 12px;
-}
-</style>
 <script>
 export default {
   name: "PxProductForm",
@@ -112,12 +98,22 @@ export default {
         category_id: this.product.category_id || null,
         status: this.product.status || null,
       },
+      file: null
     };
   },
 
   methods: {
-    validarForm(e) {
-      e.preventDefault();
+
+    loadImage() {
+      this.file = this.$refs.newFile.files[0]
+      const reader = new FileReader()
+      reader.onload = (e) => {
+        this.form.image = e.target.result;
+      }
+      reader.readAsDataURL(this.$refs.newFile.files[0])
+    },
+
+    submitForm() {
 
       if (this.form.name) {
         let slug = this.form.name.replaceAll(" ", "-").toLowerCase();
@@ -126,8 +122,48 @@ export default {
         this.form.slug = slug;
       }
 
-      this.$emit("form-submit", this.form);
+      if (this.file) {
+        this.$emit("form-submit", this.form, this.file);
+      }
+      else {
+        this.$emit("form-submit", this.form);
+      }
     },
   },
 };
 </script>
+
+<style scoped>
+.product-form__field {
+  margin-bottom: 24px;
+  display: grid;
+  grid-template-columns: 200px auto;
+  align-items: center;
+}
+.product-form__field > label {
+  font-weight: bold;
+}
+.product-form__image {
+  margin-bottom: 12px;
+  display: block;
+  width: 100%;
+}
+.product-form__input {
+  width: 100%;
+  display: block;
+}
+.product-form__radio {
+  display: block;
+  margin-bottom: 4px;
+}
+.product-form__radio-button {
+  margin-right: 8px;
+}
+.product-form__button {
+  display: flex;
+  justify-content: flex-end;
+}
+.product-form__button .button {
+  margin-left: 12px;
+}
+</style>
