@@ -1,6 +1,7 @@
 import Vue from "vue";
 import decode from "jwt-decode";
 import VueRouter from "vue-router";
+import store from '@/store'
 
 import Index from "@/views/admin/Index.vue";
 
@@ -8,7 +9,6 @@ import ProductIndex from "@/views/admin/products/Index.vue";
 import Create from "@/views/admin/products/Create.vue";
 import Edit from "@/views/admin/products/Edit.vue";
 import Show from "@/views/admin/products/Show.vue";
-import Login from "@/views/admin/login/Login.vue";
 
 import Imagen from "@/views/admin/Image.vue";
 
@@ -65,11 +65,6 @@ const routes = [
     component: Imagen,
     meta: { requiresAuth: true },
   },
-  {
-    path: "/admin/login",
-    name: "login",
-    component: Login,
-  },
 
   {
     path: "/admin/*",
@@ -89,10 +84,15 @@ router.beforeEach((to, from, next) => {
   if (to.matched.some((record) => record.meta.requiresAuth)) {
     // this route requires auth, check if logged in
     // if not, redirect to login page.
-    let token = decode(localStorage.getItem("token"));
+    let token = localStorage.getItem("token");
     if (!token) {
-      this.$router.push({ name: "login" });
+      
+      window.location.assign(`${process.env.BASE_URL}login`)
     } else {
+      
+      let userToken = decode(token);
+      store.commit('setUser', userToken)
+
       next();
     }
   } else {

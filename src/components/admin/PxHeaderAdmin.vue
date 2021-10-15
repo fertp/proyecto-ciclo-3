@@ -4,14 +4,43 @@
       <div class="header-logo">
         <img src="@/assets/bicicleta.svg" alt="" class="header-logo__img" />
       </div>
-      <div class="header-user">
-        <img src="@/assets/user-icon.jpg" alt="" class="header-user__img" />
-        <p class="header-user__name">usuario</p>
-        <img src="@/assets/desplegable-icon.png" alt="" class="header-desplegable__img" />
+      <div 
+        class="header-user">
+        <img src="@/assets/user-icon.jpg" class="header-user__img" />
+        <p v-if="user.name" 
+          class="header-user__name">{{ user.name }}</p>
+        <img src="@/assets/logout.svg" @click="logoutUser" class="header-desplegable__img" />
       </div>
     </div>
   </header>
 </template>
+
+<script>
+export default {
+  name: "PxHeaderAdmin",
+
+  data () {
+    return {
+      // userNav: false
+    }
+  },
+  
+  computed: {
+    user: function () {
+      return this.$store.state.user
+    }
+  },
+
+  methods: {
+
+    logoutUser() {
+      localStorage.removeItem('token')
+      window.location.assign(`${process.env.BASE_URL}login`)
+    }
+
+  }
+};
+</script>
 
 <style>
 body {
@@ -42,6 +71,7 @@ body {
 }
 
 .header-user {
+  position: relative;
   align-items: center;
   display: flex;
 }
@@ -50,22 +80,16 @@ body {
   display: block;
   height: 36px;
   width: 36px;
-  margin-right: 20px;
 }
 .header-user__name {
-  margin-right: 20px;
+  padding: 20px;
 }
 
 .header-desplegable__img {
   display: block;
-  width: 12px;
-  height: 12px;
+  width: 24px;
+  height: 48px;
   /* margin-left: 20px; */
+  cursor: pointer;
 }
 </style>
-
-<script>
-export default {
-  name: "PxHeaderAdmin",
-};
-</script>

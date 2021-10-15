@@ -62,14 +62,13 @@ export default {
         email: this.email,
         password: this.password,
       };
-      api
-        .userLogin(user)
+      api.userLogin(user)
         .then((response) => {
           return response.data;
         })
         .then((data) => {
           localStorage.setItem("token", data.tokenReturn);
-          this.$router.push({ name: "admin" });
+          window.location.assign(`${process.env.BASE_URL}admin`)
         })
         .catch((e) => console.log(e.message));
     },

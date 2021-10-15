@@ -11,9 +11,9 @@
         <li class="side-panel__item">
           <router-link to="/admin/categorias" class="side-panel__link">Categorías</router-link>
         </li>
-        <li class="side-panel__item">
+        <!-- <li class="side-panel__item">
           <router-link to="/admin/usuarios" class="side-panel__link">Usuarios</router-link>
-        </li>
+        </li> -->
       </ul>
       <ul class="side-panel__list">
         <li class="side-panel__item">

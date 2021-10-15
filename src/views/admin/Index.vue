@@ -1,7 +1,7 @@
 <template>
   <admin-layout> 
     
-    <h1 style="color:red;background:yellow">ACÁ HAY QUE PONER ALGO LINDO.</h1>
+    <h1>El sistema tiene {{ products.length }} productos cargados</h1>
 
   </admin-layout>
 </template>
