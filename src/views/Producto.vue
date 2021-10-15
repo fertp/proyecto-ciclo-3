@@ -1,5 +1,6 @@
 <template>
   <web-layout>
+    <px-title :title="title" class="page-title" />
     <main class="producto-page">
       <div class="producto-page__container">
         <!-- row1 -->
@@ -47,6 +48,9 @@
 </template>
 
 <style scoped>
+.page-title {
+  margin-top: 80px;
+}
 .producto-page {
   padding: 0 30px;
   box-sizing: border-box;
@@ -80,14 +84,15 @@
 
 <script>
 import WebLayout from "@/layouts/WebLayout.vue";
+import PxTitle from "@/components/PxTitle";
 import PxProductCard from "@/components/PxProductCard.vue";
-// import productsJson from "@/productos.json";
 import api from "@/api.js";
 
 export default {
   name: "Producto",
   components: {
     WebLayout,
+    PxTitle,
     PxProductCard,
   },
 
@@ -103,6 +108,10 @@ export default {
       let formatedPrice = "$" + this.product.price;
       return formatedPrice;
     },
+    
+    title() {
+      return this.product.name
+    }
   },
 
   created() {

@@ -1,5 +1,6 @@
 <template>
   <web-layout>
+    <px-title :title="title" class="page-title" />
     <main class="productos-page">
       <div class="productos-page__container">
         <aside class="aside-categoria">
@@ -20,6 +21,9 @@
 </template>
 
 <style scoped>
+.page-title {
+  margin-top: 80px;
+}
 .productos-page {
   padding: 80px 30px 0;
   box-sizing: border-box;
@@ -74,6 +78,7 @@
 import WebLayout from "@/layouts/WebLayout.vue";
 import PxCategorias from "@/components/PxCategorias.vue";
 import PxProductCard from "@/components/PxProductCard.vue";
+import PxTitle from "@/components/PxTitle";
 import api from "@/api.js";
 
 export default {
@@ -82,6 +87,7 @@ export default {
     WebLayout,
     PxCategorias,
     PxProductCard,
+    PxTitle,
   },
 
   data() {
@@ -90,6 +96,13 @@ export default {
       category: {},
       categories: [],
     };
+  },
+
+  computed: {
+    
+    title() {
+      return this.category.name
+    }
   },
 
   created() {

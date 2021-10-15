@@ -1,5 +1,6 @@
 <template>
   <web-layout>
+    <px-title :title="title" class="page-title" />
     <main class="page-nosotros">
       <div class="page-nosotros__container">
         <h1 class="nosotros__title">Nosotros</h1>
@@ -14,15 +15,18 @@
 <script>
 import WebLayout from "@/layouts/WebLayout.vue";
 import PxTeamCard from "../components/PxTeamCard.vue";
+import PxTitle from "@/components/PxTitle";
 
 export default {
   name: "Nosotros",
   components: {
     WebLayout,
     PxTeamCard,
+    PxTitle,
   },
   data() {
     return {
+      title: 'Nosotros',
       members: [
         {
           id: 1,
@@ -52,6 +56,9 @@ export default {
 </script>
 
 <style scoped>
+.page-title {
+  margin-top: 80px;
+}
 .page-nosotros {
   padding: 0 30px;
   box-sizing: border-box;
