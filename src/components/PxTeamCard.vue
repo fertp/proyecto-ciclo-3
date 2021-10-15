@@ -1,6 +1,6 @@
 <template>
   <article class="team-card">
-    <img src="@/assets/Foto_NG.jpg" :alt="member.name" class="team-card__img" />
+    <img :src="member.image" :alt="member.name" class="team-card__img" />
     <div class="team-card__text">
       <h3 class="team-card__name">
         {{ member.name }}
