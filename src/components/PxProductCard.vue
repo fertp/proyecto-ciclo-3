@@ -10,7 +10,8 @@
       </p>
       <router-link
         :to="{ name: 'producto', params: { slug: product.slug, id: product.id } }"
-        class="product-card__button">
+        class="product-card__button"
+      >
         VER PRODUCTO
       </router-link>
     </div>

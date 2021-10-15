@@ -1,8 +1,6 @@
 <template>
-  <admin-layout> 
-    
-    <h1 style="color:red;background:yellow">ACÁ HAY QUE PONER ALGO LINDO.</h1>
-
+  <admin-layout>
+    <h1 style="color: red; background: yellow">ACÁ HAY QUE PONER ALGO LINDO.</h1>
   </admin-layout>
 </template>
 
@@ -23,12 +21,9 @@ export default {
   created() {
     api.getProducts().then((response) => {
       this.products = response.data;
-    })
+    });
   },
 
-  methods: {
-
-  }
-
+  methods: {},
 };
 </script>
