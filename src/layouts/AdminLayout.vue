@@ -7,14 +7,12 @@
     <div class="admin-layout__content-grid">
       <!-- side-panel -->
       <px-side-panel />
+
       <!-- content-slot -->
       <section class="admin-layout__content-slot">
-
         <slot> </slot>
-
       </section>
     </div>
-
   </div>
 </template>
 

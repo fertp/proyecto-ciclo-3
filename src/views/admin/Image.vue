@@ -1,12 +1,10 @@
 <template>
-  <admin-layout> 
-    
+  <admin-layout>
     <h1>Imagen</h1>
     <form @submit.prevent="enviarArchivo">
-      <input type="file" ref="file" name="image" @change="cargaArchivo">
+      <input type="file" ref="file" name="image" @change="cargaArchivo" />
       <button type="submit">Enviar</button>
     </form>
-
   </admin-layout>
 </template>
 
