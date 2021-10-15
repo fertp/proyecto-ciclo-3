@@ -7,20 +7,19 @@
     <div class="admin-layout__content-grid">
       <!-- side-panel -->
       <px-side-panel />
+
       <!-- content-slot -->
       <section class="admin-layout__content-slot">
-
         <slot> </slot>
-
       </section>
     </div>
-
   </div>
 </template>
 
 <script>
 import PxHeaderAdmin from "@/components/admin/PxHeaderAdmin.vue";
 import PxSidePanel from "@/components/admin/PxSidePanel.vue";
+// import PxLogin from "@/components/admin/PxLogin.vue";
 
 export default {
   name: "AdminLayout",

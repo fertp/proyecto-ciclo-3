@@ -44,15 +44,21 @@ const getCategories = () => {
 
 const storeCategory = (category) => {
   return axios.post(`${url}categories/store`, category);
-}
+};
 
 const updateCategory = (id, category) => {
   return axios.put(`${url}categories/update/${id}`, category);
-}
+};
 
 const deleteCategory = (id) => {
-  return axios.delete(`${url}categories/delete/${id}`)
-}
+  return axios.delete(`${url}categories/delete/${id}`);
+};
+
+//login
+
+const userLogin = (user) => {
+  return axios.post(`${url}users/login`, user);
+};
 
 export default {
   // products
@@ -69,4 +75,6 @@ export default {
   storeCategory,
   updateCategory,
   deleteCategory,
+  // login
+  userLogin,
 };

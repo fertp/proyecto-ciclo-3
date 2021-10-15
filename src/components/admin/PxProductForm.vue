@@ -62,7 +62,7 @@
   </div>
 </template>
 
-<style scoped>
+<style>
 .product-form__field {
   margin-bottom: 12px;
   display: grid;
